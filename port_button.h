@@ -21,6 +21,17 @@
 /* Defines */
 
 
+/* Typedefs --------------------------------------------------------------------*/
+typedef struct
+{
+    GPIO_TypeDef *p_port;
+    uint8_t pin;
+    bool flag_pressed;
+} port_button_hw_t;
+
+/* Global variables */
+
+
 /* Function prototypes and explanation -------------------------------------------------*/
 
 

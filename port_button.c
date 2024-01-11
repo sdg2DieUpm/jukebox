@@ -12,14 +12,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "port_button.h"
 
-/* Typedefs --------------------------------------------------------------------*/
-typedef struct
-{
-    GPIO_TypeDef *p_port;
-    uint8_t pin;
-    bool flag_pressed;
-} port_button_hw_t;
-
 /* Global variables ------------------------------------------------------------*/
 
 void port_button_init(uint32_t button_id)

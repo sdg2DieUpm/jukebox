@@ -10,10 +10,6 @@
 #include "fsm_button.h"
 #include "port_button.h"
 
-/* Typedefs --------------------------------------------------------------------*/
-
-/* Defines and enums ----------------------------------------------------------*/
-/* Enums */
 
 /* State machine input or transition functions */
 
@@ -22,7 +18,6 @@
 
 
 /* Other auxiliary functions */
-
 
 fsm_t *fsm_button_new(uint32_t debounce_time, uint32_t button_id)
 {
