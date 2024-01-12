@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('interr_8c.html',''); initResizable(); 
 
 <p>Interrupt service routines for the STM32F4 platform.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;stm32f4xx.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="port__system_8h.html">port_system.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="port__button_8h.html">port_button.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="port__usart_8h.html">port_usart.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="port__buzzer_8h.html">port_buzzer.h</a>&quot;</code><br />
@@ -171,12 +171,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM2_IRQHandler</b> (
 <p>Interrupt service routine for the System tick timer (SysTick). </p>
 <dl class="section note"><dt>Note</dt><dd>This ISR is called when the SysTick timer generates an interrupt. The program flow jumps to this ISR and increments the tick counter by one millisecond.</dd></dl>
 <blockquote class="doxtable">
-<p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. <b>Increment the System tick counter <code>msTicks</code> in 1 count.</b> <br  />
- &#160;&#160;&#160;&#160;💡 <code>msTicks</code> is a global <code>static</code> variable declared in <a class="el" href="port__system_8c.html">port_system.c</a>. <br  />
-</p>
+<p>✅ 1. <b>Increment the System tick counter <code>msTicks</code> in 1 count.</b> To do so, use the function <code><a class="el" href="port__system_8h.html#ab415270cfcefc90ed8b8842da4e3d4c6" title="Get the count of the System tick in milliseconds.">port_system_get_millis()</a></code> and <code><a class="el" href="port__system_8h.html#ab415270cfcefc90ed8b8842da4e3d4c6" title="Get the count of the System tick in milliseconds.">port_system_get_millis()</a></code>. </p>
 </blockquote>
-<dl class="section warning"><dt>Warning</dt><dd><b>The variable <code>msTicks</code> must be declared volatile!</b> Just because it is modified by a call of an ISR, in order to avoid <a href="https://en.wikipedia.org/wiki/Race_condition"><em>race conditions</em></a> . <b>Add it to the definition</b> after <em>static</em>. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><b>The variable <code>msTicks</code> must be declared volatile!</b> Just because it is modified by a call of an ISR, in order to avoid <a href="https://en.wikipedia.org/wiki/Race_condition"><em>race conditions</em></a> . <b>Added to the definition</b> after <em>static</em>. </dd></dl>
 
 </div>
 </div>

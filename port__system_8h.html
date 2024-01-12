@@ -721,10 +721,13 @@ Functions</h2></td></tr>
 
     (#) To set/reset the level of a pin configured in output mode use the GPIOx_BSRR register
         to SET (bits 0..15) or RESET (bits 16..31) the GPIO.</pre> <blockquote class="doxtable">
-<p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Enable GPIOx clock in AHB1ENR <br  />
-✅ 2. Set mode in MODER <br  />
-✅ 3. Set pull up/down configuration </p>
+<ol type="1">
+<li>Enable GPIOx clock in AHB1ENR <br  />
+</li>
+<li>Set mode in MODER <br  />
+</li>
+<li>Set pull up/down configuration </li>
+</ol>
 </blockquote>
 <dl class="section note"><dt>Note</dt><dd>This function performs the GPIO Port Clock Enable. It may occur that a port clock is re-enabled, it does not matter if it was already enabled. * </dd>
 <dd>
@@ -781,14 +784,17 @@ This function enables the AHB1 peripheral clock. After reset, the peripheral clo
 
 <p>Configure the alternate function of a GPIO. </p>
 <blockquote class="doxtable">
-<p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. <b>Create a 4-bit base mask</b>. <br  />
-✅ 2. Shift left the mask depending on the value of the given **<code>pin</code> modulo 8.** <br  />
+<ol type="1">
+<li><b>Create a 4-bit base mask</b>. <br  />
+</li>
+<li>Shift left the mask depending on the value of the given **<code>pin</code> modulo 8.** <br  />
 &#160;&#160;&#160;&#160;💡 The value of <code>pin</code> ranges from 0 to 15. The registers GPIOx_AFRH and GPIOx_AFRL implement 8 groups of 4 bits each. In order to use the value of <code>pin</code> as index to select the corresponding group of bits, we can use the remainder of the division by 8. <br  />
-✅ 3. Clean and set the bits <b>as shown in the tutorial document</b>. <br  />
+</li>
+<li>Clean and set the bits <b>as shown in the tutorial document</b>. <br  />
 &#160;&#160;&#160;&#160;💡 Clean the corresponding bit on element <code>0</code> or <code>1</code> of the AFR array (<em>e.g</em>, <code>GPIOA-&gt;AFR[0]</code> for GPIOx_AFRL) <br  />
 &#160;&#160;&#160;&#160;💡 Set the given value (<code>alternate</code>) of the alternate function, using bit shifting, for example. <br  />
-</p>
+</li>
+</ol>
 </blockquote>
 <p><br  />
 </p><blockquote class="doxtable">
@@ -1252,6 +1258,11 @@ If an interruption occurs the system wakes up and resets the system mode.</p>
 
 <p>Sets the number of milliseconds since the system started. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This function must be used only by the <a class="el" href="interr_8c.html#ab5e09814056d617c521549e542639b7e" title="Interrupt service routine for the System tick timer (SysTick).">SysTick_Handler()</a> ISR in file <code><a class="el" href="interr_8c.html" title="Interrupt service routines for the STM32F4 platform.">interr.c</a></code>.</dd></dl>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Set System tick to the value received <br  />
+</p>
+</blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ms</td><td>New number of milliseconds since the system started. º </td></tr>
@@ -1354,8 +1365,8 @@ If an interruption occurs the system wakes up and resets the system mode.</p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aport__system_8h_html_af3c45ccd0a549c3d753b752b726a795f"><div class="ttname"><a href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f">port_system_systick_suspend</a></div><div class="ttdeci">void port_system_systick_suspend(void)</div><div class="ttdoc">Suspend Tick increment.</div><div class="ttdef"><b>Definition:</b> port_system.c:168</div></div>
-<div class="ttc" id="aport__system_8h_html_a9ba4258bf8d3fa567f2bb0d6c43029a2"><div class="ttname"><a href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">port_system_power_stop</a></div><div class="ttdeci">void port_system_power_stop(void)</div><div class="ttdoc">Set the system in stop mode for low power consumption.</div><div class="ttdef"><b>Definition:</b> port_system.c:310</div></div>
-<div class="ttc" id="aport__system_8h_html_a5dcdf1cde8372fa1893e1c8f2baf6e55"><div class="ttname"><a href="port__system_8h.html#a5dcdf1cde8372fa1893e1c8f2baf6e55">port_system_power_sleep</a></div><div class="ttdeci">void port_system_power_sleep(void)</div><div class="ttdoc">Set the system in sleep mode for low power consumption.</div><div class="ttdef"><b>Definition:</b> port_system.c:325</div></div>
+<div class="ttc" id="aport__system_8h_html_a9ba4258bf8d3fa567f2bb0d6c43029a2"><div class="ttname"><a href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">port_system_power_stop</a></div><div class="ttdeci">void port_system_power_stop(void)</div><div class="ttdoc">Set the system in stop mode for low power consumption.</div><div class="ttdef"><b>Definition:</b> port_system.c:303</div></div>
+<div class="ttc" id="aport__system_8h_html_a5dcdf1cde8372fa1893e1c8f2baf6e55"><div class="ttname"><a href="port__system_8h.html#a5dcdf1cde8372fa1893e1c8f2baf6e55">port_system_power_sleep</a></div><div class="ttdeci">void port_system_power_sleep(void)</div><div class="ttdoc">Set the system in sleep mode for low power consumption.</div><div class="ttdef"><b>Definition:</b> port_system.c:318</div></div>
 <div class="ttc" id="aport__system_8h_html_a2dca6b2c8ee48c36828b323f42c47fc8"><div class="ttname"><a href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">port_system_systick_resume</a></div><div class="ttdeci">void port_system_systick_resume(void)</div><div class="ttdoc">Resume Tick increment.</div><div class="ttdef"><b>Definition:</b> port_system.c:159</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
