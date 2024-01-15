@@ -93,77 +93,77 @@ $(document).ready(function(){initNavTree('fsm__buzzer_8c.html',''); initResizabl
 <p>Buzzer melody player FSM main file.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="melodies_8h.html">melodies.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="fsm__buzzer_8h.html">fsm_buzzer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="port__buzzer_8h.html">port_buzzer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fsm__buzzer_8h.html">fsm_buzzer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="melodies_8h.html">melodies.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9d2ee57bf248ca0e856ecbb6ee65f402"><td class="memItemLeft" align="right" valign="top"><a id="a9d2ee57bf248ca0e856ecbb6ee65f402"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>_start_note</b> (fsm_t *p_this, double freq, uint32_t duration)</td></tr>
+<tr class="memitem:a9d2ee57bf248ca0e856ecbb6ee65f402"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402">_start_note</a> (fsm_t *p_this, double freq, uint32_t duration)</td></tr>
+<tr class="memdesc:a9d2ee57bf248ca0e856ecbb6ee65f402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a note by setting the PWM frequency and the timer duration.  <a href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402">More...</a><br /></td></tr>
 <tr class="separator:a9d2ee57bf248ca0e856ecbb6ee65f402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b2cf843f153c34b823c1689becef2e7"><td class="memItemLeft" align="right" valign="top"><a id="a4b2cf843f153c34b823c1689becef2e7"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_player_start</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a4b2cf843f153c34b823c1689becef2e7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a4b2cf843f153c34b823c1689becef2e7">check_player_start</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a4b2cf843f153c34b823c1689becef2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the player is set to start.  <a href="fsm__buzzer_8c.html#a4b2cf843f153c34b823c1689becef2e7">More...</a><br /></td></tr>
 <tr class="separator:a4b2cf843f153c34b823c1689becef2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fa148f96b7924ddc77160aafe30bbba"><td class="memItemLeft" align="right" valign="top"><a id="a5fa148f96b7924ddc77160aafe30bbba"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_end_melody</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a5fa148f96b7924ddc77160aafe30bbba"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a5fa148f96b7924ddc77160aafe30bbba">check_end_melody</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a5fa148f96b7924ddc77160aafe30bbba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if it has been reached the end of the melody.  <a href="fsm__buzzer_8c.html#a5fa148f96b7924ddc77160aafe30bbba">More...</a><br /></td></tr>
 <tr class="separator:a5fa148f96b7924ddc77160aafe30bbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade322c878a42b1a35cba782d1a2a923d"><td class="memItemLeft" align="right" valign="top"><a id="ade322c878a42b1a35cba782d1a2a923d"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_pause</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:ade322c878a42b1a35cba782d1a2a923d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#ade322c878a42b1a35cba782d1a2a923d">check_pause</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:ade322c878a42b1a35cba782d1a2a923d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the player is set to pause.  <a href="fsm__buzzer_8c.html#ade322c878a42b1a35cba782d1a2a923d">More...</a><br /></td></tr>
 <tr class="separator:ade322c878a42b1a35cba782d1a2a923d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d44fde0d2bab0dd806b88a1fc152ddc"><td class="memItemLeft" align="right" valign="top"><a id="a3d44fde0d2bab0dd806b88a1fc152ddc"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_play</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a3d44fde0d2bab0dd806b88a1fc152ddc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a3d44fde0d2bab0dd806b88a1fc152ddc">check_play</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a3d44fde0d2bab0dd806b88a1fc152ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the player is set to play.  <a href="fsm__buzzer_8c.html#a3d44fde0d2bab0dd806b88a1fc152ddc">More...</a><br /></td></tr>
 <tr class="separator:a3d44fde0d2bab0dd806b88a1fc152ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fc0328bcd8064e216e69c94f487d7eb"><td class="memItemLeft" align="right" valign="top"><a id="a9fc0328bcd8064e216e69c94f487d7eb"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_stop_melody</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a9fc0328bcd8064e216e69c94f487d7eb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a9fc0328bcd8064e216e69c94f487d7eb">check_stop_melody</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a9fc0328bcd8064e216e69c94f487d7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the player is set to stop.  <a href="fsm__buzzer_8c.html#a9fc0328bcd8064e216e69c94f487d7eb">More...</a><br /></td></tr>
 <tr class="separator:a9fc0328bcd8064e216e69c94f487d7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8a1d80bdb758cd594a1318561398790"><td class="memItemLeft" align="right" valign="top"><a id="af8a1d80bdb758cd594a1318561398790"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_play_note</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:af8a1d80bdb758cd594a1318561398790"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#af8a1d80bdb758cd594a1318561398790">check_play_note</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:af8a1d80bdb758cd594a1318561398790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the player is set to play a note.  <a href="fsm__buzzer_8c.html#af8a1d80bdb758cd594a1318561398790">More...</a><br /></td></tr>
 <tr class="separator:af8a1d80bdb758cd594a1318561398790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b8aac69d23edb2c37d2b2874f4dc0ea"><td class="memItemLeft" align="right" valign="top"><a id="a3b8aac69d23edb2c37d2b2874f4dc0ea"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_note_end</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a3b8aac69d23edb2c37d2b2874f4dc0ea"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a3b8aac69d23edb2c37d2b2874f4dc0ea">check_note_end</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a3b8aac69d23edb2c37d2b2874f4dc0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the note has ended.  <a href="fsm__buzzer_8c.html#a3b8aac69d23edb2c37d2b2874f4dc0ea">More...</a><br /></td></tr>
 <tr class="separator:a3b8aac69d23edb2c37d2b2874f4dc0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b6ec9630719e46d78d858136d170548"><td class="memItemLeft" align="right" valign="top"><a id="a9b6ec9630719e46d78d858136d170548"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>do_player_start</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a9b6ec9630719e46d78d858136d170548"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a9b6ec9630719e46d78d858136d170548">do_player_start</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a9b6ec9630719e46d78d858136d170548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the player.  <a href="fsm__buzzer_8c.html#a9b6ec9630719e46d78d858136d170548">More...</a><br /></td></tr>
 <tr class="separator:a9b6ec9630719e46d78d858136d170548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ec465109b1c899aab8742ce398be69b"><td class="memItemLeft" align="right" valign="top"><a id="a7ec465109b1c899aab8742ce398be69b"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>do_player_stop</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a7ec465109b1c899aab8742ce398be69b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a7ec465109b1c899aab8742ce398be69b">do_player_stop</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a7ec465109b1c899aab8742ce398be69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the player.  <a href="fsm__buzzer_8c.html#a7ec465109b1c899aab8742ce398be69b">More...</a><br /></td></tr>
 <tr class="separator:a7ec465109b1c899aab8742ce398be69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92c081dc3b4b447fe2f9aa220c716c5d"><td class="memItemLeft" align="right" valign="top"><a id="a92c081dc3b4b447fe2f9aa220c716c5d"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>do_pause</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a92c081dc3b4b447fe2f9aa220c716c5d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a92c081dc3b4b447fe2f9aa220c716c5d">do_pause</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a92c081dc3b4b447fe2f9aa220c716c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the player.  <a href="fsm__buzzer_8c.html#a92c081dc3b4b447fe2f9aa220c716c5d">More...</a><br /></td></tr>
 <tr class="separator:a92c081dc3b4b447fe2f9aa220c716c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a66126a3681a83db0d83990a8d63f4"><td class="memItemLeft" align="right" valign="top"><a id="a19a66126a3681a83db0d83990a8d63f4"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>do_resume</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a19a66126a3681a83db0d83990a8d63f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a19a66126a3681a83db0d83990a8d63f4">do_resume</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a19a66126a3681a83db0d83990a8d63f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume the player.  <a href="fsm__buzzer_8c.html#a19a66126a3681a83db0d83990a8d63f4">More...</a><br /></td></tr>
 <tr class="separator:a19a66126a3681a83db0d83990a8d63f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73769365563acf08857e0898cfaffa09"><td class="memItemLeft" align="right" valign="top"><a id="a73769365563acf08857e0898cfaffa09"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>do_stop_melody</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a73769365563acf08857e0898cfaffa09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a73769365563acf08857e0898cfaffa09">do_stop_melody</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a73769365563acf08857e0898cfaffa09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the player.  <a href="fsm__buzzer_8c.html#a73769365563acf08857e0898cfaffa09">More...</a><br /></td></tr>
 <tr class="separator:a73769365563acf08857e0898cfaffa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c325cbdc499d5c087a6daa29f10c6fe"><td class="memItemLeft" align="right" valign="top"><a id="a1c325cbdc499d5c087a6daa29f10c6fe"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>do_player_update</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a1c325cbdc499d5c087a6daa29f10c6fe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a1c325cbdc499d5c087a6daa29f10c6fe">do_player_update</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a1c325cbdc499d5c087a6daa29f10c6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the player.  <a href="fsm__buzzer_8c.html#a1c325cbdc499d5c087a6daa29f10c6fe">More...</a><br /></td></tr>
 <tr class="separator:a1c325cbdc499d5c087a6daa29f10c6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e88c8026c097972bfe7f19111ef78e"><td class="memItemLeft" align="right" valign="top"><a id="a50e88c8026c097972bfe7f19111ef78e"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>do_note_end</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a50e88c8026c097972bfe7f19111ef78e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a50e88c8026c097972bfe7f19111ef78e">do_note_end</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a50e88c8026c097972bfe7f19111ef78e"><td class="mdescLeft">&#160;</td><td class="mdescRight">End the note.  <a href="fsm__buzzer_8c.html#a50e88c8026c097972bfe7f19111ef78e">More...</a><br /></td></tr>
 <tr class="separator:a50e88c8026c097972bfe7f19111ef78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ef7bd7bd1aeef564a3506c61201dc98"><td class="memItemLeft" align="right" valign="top"><a id="a9ef7bd7bd1aeef564a3506c61201dc98"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>fsm_buzzer_check_activity</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a9ef7bd7bd1aeef564a3506c61201dc98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a9ef7bd7bd1aeef564a3506c61201dc98">fsm_buzzer_check_activity</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a9ef7bd7bd1aeef564a3506c61201dc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the buzzer finite state machine is playing a melody.  <a href="fsm__buzzer_8c.html#a9ef7bd7bd1aeef564a3506c61201dc98">More...</a><br /></td></tr>
 <tr class="separator:a9ef7bd7bd1aeef564a3506c61201dc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3e512b856b3f53e8deb6e48aa341e8f"><td class="memItemLeft" align="right" valign="top"><a id="ab3e512b856b3f53e8deb6e48aa341e8f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fsm_buzzer_set_melody</b> (fsm_t *p_this, const <a class="el" href="structmelody__t.html">melody_t</a> *p_melody)</td></tr>
+<tr class="memitem:ab3e512b856b3f53e8deb6e48aa341e8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#ab3e512b856b3f53e8deb6e48aa341e8f">fsm_buzzer_set_melody</a> (fsm_t *p_this, const <a class="el" href="structmelody__t.html">melody_t</a> *p_melody)</td></tr>
+<tr class="memdesc:ab3e512b856b3f53e8deb6e48aa341e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the melody to play.  <a href="fsm__buzzer_8c.html#ab3e512b856b3f53e8deb6e48aa341e8f">More...</a><br /></td></tr>
 <tr class="separator:ab3e512b856b3f53e8deb6e48aa341e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6da02d907f191969f39f6988e07d8d9"><td class="memItemLeft" align="right" valign="top"><a id="ac6da02d907f191969f39f6988e07d8d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fsm_buzzer_set_speed</b> (fsm_t *p_this, double speed)</td></tr>
+<tr class="memitem:ac6da02d907f191969f39f6988e07d8d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#ac6da02d907f191969f39f6988e07d8d9">fsm_buzzer_set_speed</a> (fsm_t *p_this, double speed)</td></tr>
+<tr class="memdesc:ac6da02d907f191969f39f6988e07d8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the speed of the player.  <a href="fsm__buzzer_8c.html#ac6da02d907f191969f39f6988e07d8d9">More...</a><br /></td></tr>
 <tr class="separator:ac6da02d907f191969f39f6988e07d8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63d85479ddbaed960f1cfbc00476989b"><td class="memItemLeft" align="right" valign="top"><a id="a63d85479ddbaed960f1cfbc00476989b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fsm_buzzer_set_status</b> (fsm_t *p_this, uint8_t status)</td></tr>
+<tr class="memitem:a63d85479ddbaed960f1cfbc00476989b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a63d85479ddbaed960f1cfbc00476989b">fsm_buzzer_set_status</a> (fsm_t *p_this, uint8_t status)</td></tr>
+<tr class="memdesc:a63d85479ddbaed960f1cfbc00476989b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the status of the player.  <a href="fsm__buzzer_8c.html#a63d85479ddbaed960f1cfbc00476989b">More...</a><br /></td></tr>
 <tr class="separator:a63d85479ddbaed960f1cfbc00476989b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ac29163340f31d14cb8c135f559846"><td class="memItemLeft" align="right" valign="top"><a id="a21ac29163340f31d14cb8c135f559846"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>fsm_buzzer_get_status</b> (fsm_t *p_this)</td></tr>
+<tr class="memitem:a21ac29163340f31d14cb8c135f559846"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a21ac29163340f31d14cb8c135f559846">fsm_buzzer_get_status</a> (fsm_t *p_this)</td></tr>
+<tr class="memdesc:a21ac29163340f31d14cb8c135f559846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of the player.  <a href="fsm__buzzer_8c.html#a21ac29163340f31d14cb8c135f559846">More...</a><br /></td></tr>
 <tr class="separator:a21ac29163340f31d14cb8c135f559846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7bdbdd14bc6ff1741c58c23573da025"><td class="memItemLeft" align="right" valign="top"><a id="ae7bdbdd14bc6ff1741c58c23573da025"></a>
-fsm_t *&#160;</td><td class="memItemRight" valign="bottom"><b>fsm_buzzer_new</b> (uint32_t buzzer_id)</td></tr>
+<tr class="memitem:ae7bdbdd14bc6ff1741c58c23573da025"><td class="memItemLeft" align="right" valign="top">fsm_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#ae7bdbdd14bc6ff1741c58c23573da025">fsm_buzzer_new</a> (uint32_t buzzer_id)</td></tr>
+<tr class="memdesc:ae7bdbdd14bc6ff1741c58c23573da025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new buzzer finite state machine.  <a href="fsm__buzzer_8c.html#ae7bdbdd14bc6ff1741c58c23573da025">More...</a><br /></td></tr>
 <tr class="separator:ae7bdbdd14bc6ff1741c58c23573da025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496c577de621e9d16aa9d6497ce7305a"><td class="memItemLeft" align="right" valign="top"><a id="a496c577de621e9d16aa9d6497ce7305a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fsm_buzzer_init</b> (fsm_t *p_this, uint32_t buzzer_id)</td></tr>
+<tr class="memitem:a496c577de621e9d16aa9d6497ce7305a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a496c577de621e9d16aa9d6497ce7305a">fsm_buzzer_init</a> (fsm_t *p_this, uint32_t buzzer_id)</td></tr>
+<tr class="memdesc:a496c577de621e9d16aa9d6497ce7305a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a buzzer finite state machine.  <a href="fsm__buzzer_8c.html#a496c577de621e9d16aa9d6497ce7305a">More...</a><br /></td></tr>
 <tr class="separator:a496c577de621e9d16aa9d6497ce7305a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -176,7 +176,937 @@ Variables</h2></td></tr>
 <div class="textblock"><p>Buzzer melody player FSM main file. </p>
 <dl class="section author"><dt>Author</dt><dd>Sistemas Digitales II </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-10-01 </dd></dl>
-</div><h2 class="groupheader">Variable Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a9d2ee57bf248ca0e856ecbb6ee65f402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d2ee57bf248ca0e856ecbb6ee65f402">&#9670;&nbsp;</a></span>_start_note()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void _start_note </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>freq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start a note by setting the PWM frequency and the timer duration. </p>
+<p>This function is the interface between the FSM and the HW. It sets the PWM frequency and the timer duration.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Update duration of the note according to the player speed. Be careful with the casting to double! <br  />
+✅ 2. Set frequency first, then duration calling the corresponding functions from <code>PORT</code> <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+    <tr><td class="paramname">freq</td><td>Frequency of the note to play. </td></tr>
+    <tr><td class="paramname">duration</td><td>Duration of the note to play. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5fa148f96b7924ddc77160aafe30bbba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa148f96b7924ddc77160aafe30bbba">&#9670;&nbsp;</a></span>check_end_melody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_end_melody </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if it has been reached the end of the melody. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Check if melody index is out of bounds of the melody array <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a3b8aac69d23edb2c37d2b2874f4dc0ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b8aac69d23edb2c37d2b2874f4dc0ea">&#9670;&nbsp;</a></span>check_note_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_note_end </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the note has ended. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call function the corresponding function from <code>PORT</code> to check if the note has ended <br  />
+✅ 2. Return the result <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="ade322c878a42b1a35cba782d1a2a923d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade322c878a42b1a35cba782d1a2a923d">&#9670;&nbsp;</a></span>check_pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_pause </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the player is set to pause. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Check if the player is set to pause <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a3d44fde0d2bab0dd806b88a1fc152ddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d44fde0d2bab0dd806b88a1fc152ddc">&#9670;&nbsp;</a></span>check_play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_play </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the player is set to play. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Check if the player is set to play <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="af8a1d80bdb758cd594a1318561398790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8a1d80bdb758cd594a1318561398790">&#9670;&nbsp;</a></span>check_play_note()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_play_note </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the player is set to play a note. </p>
+<p>If so, later the FSM will update the note and the duration.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Check if the player is set to play and if the melody index not out of bounds <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a4b2cf843f153c34b823c1689becef2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2cf843f153c34b823c1689becef2e7">&#9670;&nbsp;</a></span>check_player_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_player_start </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the player is set to start. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Check that the melody is not null and that the player is set to play <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a9fc0328bcd8064e216e69c94f487d7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc0328bcd8064e216e69c94f487d7eb">&#9670;&nbsp;</a></span>check_stop_melody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_stop_melody </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the player is set to stop. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Check if the player is set to stop <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a50e88c8026c097972bfe7f19111ef78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e88c8026c097972bfe7f19111ef78e">&#9670;&nbsp;</a></span>do_note_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_note_end </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>End the note. </p>
+<p>This function ends the note by stopping the PWM and the timer. This function is called when the note has ended.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call the corresponding function from <code>PORT</code> that stops the PWM and the timer <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a92c081dc3b4b447fe2f9aa220c716c5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c081dc3b4b447fe2f9aa220c716c5d">&#9670;&nbsp;</a></span>do_pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_pause </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pause the player. </p>
+<p>This function pauses the player by stopping the PWM and the timer. This function is called when the player is set to pause.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call the corresponding function from <code>PORT</code> that stops the PWM and the timer <br  />
+✅ 2. Update the status of the player <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b6ec9630719e46d78d858136d170548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6ec9630719e46d78d858136d170548">&#9670;&nbsp;</a></span>do_player_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_player_start </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start the player. </p>
+<p>This function starts the player by setting the PWM frequency and the timer duration of the first note. This function is called when the player is set to play only.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Get the frequency and the duration of the first note of the melody <br  />
+✅ 2. Call function <code><a class="el" href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402" title="Start a note by setting the PWM frequency and the timer duration.">_start_note()</a></code> with the right arguments <br  />
+✅ 3. Update the index of the melody <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7ec465109b1c899aab8742ce398be69b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec465109b1c899aab8742ce398be69b">&#9670;&nbsp;</a></span>do_player_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_player_stop </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop the player. </p>
+<p>This function stops the player by stopping the PWM and the timer. This function is called when the player is set to stop.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call the corresponding function from <code>PORT</code> that stops the PWM and the timer <br  />
+✅ 2. Reset the index of the melody <br  />
+✅ 3. Update the status of the player <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1c325cbdc499d5c087a6daa29f10c6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c325cbdc499d5c087a6daa29f10c6fe">&#9670;&nbsp;</a></span>do_player_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_player_update </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update the player. </p>
+<p>This function updates the player retrieving the frequency and the duration of the next note of the melody. This function is called when the player is set to play a new note.</p>
+<p><code><a class="el" href="fsm__buzzer_8c.html#a1c325cbdc499d5c087a6daa29f10c6fe" title="Update the player.">do_player_update()</a></code> is similar to <code><a class="el" href="fsm__buzzer_8c.html#a9b6ec9630719e46d78d858136d170548" title="Start the player.">do_player_start()</a></code>, but the latter starts the player from the beginning of the melody and the former starts the player from the current note.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Get the frequency and the duration of the next note of the melody <br  />
+✅ 2. Call function <code><a class="el" href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402" title="Start a note by setting the PWM frequency and the timer duration.">_start_note()</a></code> with the right arguments <br  />
+✅ 3. Update the index of the melody <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a19a66126a3681a83db0d83990a8d63f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a66126a3681a83db0d83990a8d63f4">&#9670;&nbsp;</a></span>do_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_resume </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resume the player. </p>
+<p>This function resumes the player and continues playing the melody from the note it was playing when it was paused. This function is called when the player is set to play again.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. It only updates the status of the player <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73769365563acf08857e0898cfaffa09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73769365563acf08857e0898cfaffa09">&#9670;&nbsp;</a></span>do_stop_melody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_stop_melody </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop the player. </p>
+<p>This function stops the player by stopping the PWM and the timer. This function is called when the player is set to stop. <b>It is similar to <code><a class="el" href="fsm__buzzer_8c.html#a7ec465109b1c899aab8742ce398be69b" title="Stop the player.">do_player_stop()</a></code>, but it does not update the status of the player because the player is already stopped by the user in the main program.</b></p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call the corresponding function from <code>PORT</code> that stops the PWM and the timer <br  />
+✅ 2. Reset the index of the melody <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9ef7bd7bd1aeef564a3506c61201dc98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef7bd7bd1aeef564a3506c61201dc98">&#9670;&nbsp;</a></span>fsm_buzzer_check_activity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fsm_buzzer_check_activity </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the buzzer finite state machine is playing a melody. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. This function checks if the buzzer finite state machine is playing a melody. It returns true if the player is in <code>PLAY</code>status. Otherwise it returns false. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code> struct </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the player is playing or paused. False if the player is stopped. </dd></dl>
+
+</div>
+</div>
+<a id="a21ac29163340f31d14cb8c135f559846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ac29163340f31d14cb8c135f559846">&#9670;&nbsp;</a></span>fsm_buzzer_get_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t fsm_buzzer_get_status </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the status of the player. </p>
+<p>This function returns the status of the player. This is useful to know if the player is playing, paused or stopped and a melody has ended.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Return the field <code>player_status</code> <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code> struct </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t Status of the player </dd></dl>
+
+</div>
+</div>
+<a id="a496c577de621e9d16aa9d6497ce7305a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496c577de621e9d16aa9d6497ce7305a">&#9670;&nbsp;</a></span>fsm_buzzer_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fsm_buzzer_init </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>buzzer_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a buzzer finite state machine. </p>
+<p>This function initializes the default values of the FSM struct and calls to the <code>port</code> to initialize the HW of associated to the given ID.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Initialize the field <code>buzzer_id</code> with the received value <br  />
+✅ 2. Initialize the field <code>p_melody</code> to <code>NULL</code> <br  />
+✅ 3. Initialize the field <code>melody_index</code> to 0 <br  />
+✅ 4. Initialize the field <code>player_status</code> to <code>STOP</code> <br  />
+✅ 5. Initialize the field <code>player_speed</code> to 1.0 <br  />
+✅ 6. Call function <code>port_buzzer_init()</code> with the right arguments <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code> struct </td></tr>
+    <tr><td class="paramname">buzzer_id</td><td>Unique buzzer identifier number </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae7bdbdd14bc6ff1741c58c23573da025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7bdbdd14bc6ff1741c58c23573da025">&#9670;&nbsp;</a></span>fsm_buzzer_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fsm_t* fsm_buzzer_new </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>buzzer_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new buzzer finite state machine. </p>
+<p>This FSM implements a buzzer melody player. The buzzer is considered indeed as a melody player. The user can set the melody to play, the speed of the player and the status of the player.</p>
+<p>The FSM stores a pointer to the melody to play in the <code>p_melody</code> variable. The user should set it using the function <code><a class="el" href="fsm__buzzer_8h.html#ab3e512b856b3f53e8deb6e48aa341e8f" title="Set the melody to play.">fsm_buzzer_set_melody()</a></code>.</p>
+<p>The FSM stores the current note of the melody in the <code>melody_index</code> variable. With this variable, the FSM knows which note to play next.</p>
+<p>The FSM stores the status of the player in the <code>player_status</code> variable. The user should set it using the function <code><a class="el" href="fsm__buzzer_8h.html#a63d85479ddbaed960f1cfbc00476989b" title="Set the status of the player.">fsm_buzzer_set_status()</a></code>. The user can also get it using the function <code><a class="el" href="fsm__buzzer_8h.html#a21ac29163340f31d14cb8c135f559846" title="Get the status of the player.">fsm_buzzer_get_status()</a></code>. The status is not the state of the FSM, but the status of the player. The status of the player can be:</p>
+<ul>
+<li><code>STOP</code>: The player is stopped</li>
+<li><code>PLAY</code>: The player is playing</li>
+<li><code>PAUSE</code>: The player is paused</li>
+</ul>
+<p><b>The main difference between <code>PAUSE</code> and <code>STOP</code> is that when the player is paused, the index of the melody is not reset.</b> This means that if the user resumes the player, the player will continue playing the melody from the note it was playing when it was paused. If the player is stopped, the index of the melody is reset to 0. This means that if the user starts the player again, the player will start playing the melody from the beginning.</p>
+<p>In the state <code>WAIT_START</code>, the FSM waits for the user to start a melody. The user can start a melody by setting the status of the player to <code>PLAY</code>.</p>
+<p>In the state <code>PLAY_NOTE</code>, the FSM can start a note, pause the player or stop the player. In this case it is important the order of the transitions. The FSM checks first if the player must be stopped because of the end of the melody or because the user has stopped it. In both cases the FSM moves to the state <code>WAIT_NOTE</code>. In <code>PLAY_NOTE</code> the FSM also checks if the player must be paused. If the player must be paused, the FSM moves to the state <code>PAUSE_NOTE</code>. If none of the previous conditions are met, from this state the FSM checks if it must start a new note. If it must start a note, the FSM moves to the state <code>WAIT_NOTE</code>.</p>
+<p>In the state <code>PAUSE_NOTE</code>, the FSM pauses the player. The user can pause the player by setting the status of the player to <code>PAUSE</code>. To resume the player, the user must set the status of the player to <code>PLAY</code>.</p>
+<p>In the state <code>WAIT_NOTE</code>, the FSM waits for the duration of the note to finish and moves again to the state <code>PLAY_NOTE</code> to check if it must stop, pause or play a new note.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buzzer_id</td><td>Unique buzzer identifier number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the new buzzer finite state machine </dd></dl>
+
+</div>
+</div>
+<a id="ab3e512b856b3f53e8deb6e48aa341e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3e512b856b3f53e8deb6e48aa341e8f">&#9670;&nbsp;</a></span>fsm_buzzer_set_melody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fsm_buzzer_set_melody </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmelody__t.html">melody_t</a> *&#160;</td>
+          <td class="paramname"><em>p_melody</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the melody to play. </p>
+<p>This function sets the melody to play. The user must pass a pointer to the melody to play.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Set the field <code>p_melody</code> to the received pointer <br  />
+&#160;&#160;&#160;&#160;💡 **Be careful with const pointers! --&gt; cast to non-const before copying, because the pointer is const but the data is not and we might want to modify it. ** To do so just cast like this: <code>(<a class="el" href="structmelody__t.html" title="Structure to define the Buzzer melody player FSM.">melody_t</a> *)p_melody</code> to save the value. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code> struct </td></tr>
+    <tr><td class="paramname">p_melody</td><td>Pointer to the melody to play </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac6da02d907f191969f39f6988e07d8d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6da02d907f191969f39f6988e07d8d9">&#9670;&nbsp;</a></span>fsm_buzzer_set_speed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fsm_buzzer_set_speed </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the speed of the player. </p>
+<p>This function sets the speed of the player. The user must pass a double value with the speed of the player.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Set the field <code>player_speed</code> to the received value <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code> struct </td></tr>
+    <tr><td class="paramname">speed</td><td>Speed of the player </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a63d85479ddbaed960f1cfbc00476989b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d85479ddbaed960f1cfbc00476989b">&#9670;&nbsp;</a></span>fsm_buzzer_set_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fsm_buzzer_set_status </td>
+          <td>(</td>
+          <td class="paramtype">fsm_t *&#160;</td>
+          <td class="paramname"><em>p_this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the status of the player. </p>
+<p>This function sets the status of the player. The user must pass a BUZZER_STATUS value with the status of the player.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Set the field <code>player_status</code> to the received value <br  />
+✅ 2. If the status is <code>STOP</code>, reset the field <code>melody_index</code> <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code> struct </td></tr>
+    <tr><td class="paramname">status</td><td>Status of the player </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
 <a id="ab5d3dbed8b703b2d531f12cc2e2d9279"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5d3dbed8b703b2d531f12cc2e2d9279">&#9670;&nbsp;</a></span>fsm_trans_tx</h2>
 

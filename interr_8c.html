@@ -204,7 +204,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM2_IRQHandler</b> (
 <p><b>TO-DO alumnos Version 2</b></p>
 <p>✅ 1. Get the data if it has been received a new data. To do so, check that the RXNE flag is set and the RXNEIE bit is enabled. If so, call the function <code><a class="el" href="port__usart_8h.html#a886ec2f39f0f9e18dd62cfc8d2b563a7" title="Function to read the data from the USART Data Register and store it in the input buffer.">port_usart_store_data()</a></code> <br  />
 ✅ 2. Store the data if there is new data to transmit. To do so, check that the TXE flag is set and the TXEIE bit is enabled. If so, call the function <code><a class="el" href="port__usart_8h.html#a726f80521212a7e8f3505f00e0ddf49f" title="Function to write the data from the output buffer to the USART Data Register.">port_usart_write_data()</a></code> <br  />
-✅ 3. Write the data when it is complete. To do so, check that the TC flag is set and the TCIE bit is enabled. If so, call the function <code><a class="el" href="port__usart_8h.html#a6921fcb81cdd000d89ef5e88542922c3" title="Mark a transmission as complete.">port_usart_transmission_complete()</a></code> and clean the <code>TC</code> bit of the <code>SR</code> register <br  />
 </p>
 </blockquote>
 <p><br  />

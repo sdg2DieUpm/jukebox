@@ -174,16 +174,36 @@ $(document).ready(function(){initNavTree('globals_p.html',''); initResizable(); 
 , <a class="el" href="port__system_8c.html#a92076810565c6eb7703e32ae44a5858d">port_system.c</a>
 </li>
 <li>port_system_systick_resume()
-: <a class="el" href="port__system_8c.html#a9e8de493a73a0358c667112dd67b073f">port_system.c</a>
-, <a class="el" href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">port_system.h</a>
+: <a class="el" href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">port_system.h</a>
+, <a class="el" href="port__system_8c.html#a9e8de493a73a0358c667112dd67b073f">port_system.c</a>
 </li>
 <li>port_system_systick_suspend()
 : <a class="el" href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f">port_system.h</a>
 , <a class="el" href="port__system_8c.html#ac2df29052308e4d654c413acd4cad742">port_system.c</a>
 </li>
-<li>port_usart_get_data()
-: <a class="el" href="port__usart_8h.html#a293a9c77e4b726637109fda1fdabdd76">port_usart.h</a>
-, <a class="el" href="port__usart_8c.html#a293a9c77e4b726637109fda1fdabdd76">port_usart.c</a>
+<li>port_usart_copy_to_output_buffer()
+: <a class="el" href="port__usart_8c.html#a536fbc96929ebf43704c6e5a1c2304fe">port_usart.c</a>
+, <a class="el" href="port__usart_8h.html#a8c1cbe02240b61695846e3fcc37c9e96">port_usart.h</a>
+</li>
+<li>port_usart_disable_rx_interrupt()
+: <a class="el" href="port__usart_8h.html#aab957e700177e0f22e5597fd3360e365">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#aab957e700177e0f22e5597fd3360e365">port_usart.c</a>
+</li>
+<li>port_usart_disable_tx_interrupt()
+: <a class="el" href="port__usart_8h.html#a2c921c2bd6eb9df467520b2b0c9e5499">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#a2c921c2bd6eb9df467520b2b0c9e5499">port_usart.c</a>
+</li>
+<li>port_usart_enable_rx_interrupt()
+: <a class="el" href="port__usart_8h.html#a19978b62ef50737274de9602506942db">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#a19978b62ef50737274de9602506942db">port_usart.c</a>
+</li>
+<li>port_usart_enable_tx_interrupt()
+: <a class="el" href="port__usart_8h.html#aef338f13686b48098077d803ce19c9a9">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#aef338f13686b48098077d803ce19c9a9">port_usart.c</a>
+</li>
+<li>port_usart_get_from_input_buffer()
+: <a class="el" href="port__usart_8h.html#a5bcb566f1532b7530fa9fea97925dde5">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#a9ed0306f1a8856ec7d786a0c68cecf58">port_usart.c</a>
 </li>
 <li>port_usart_hw
 : <a class="el" href="port__usart_8h.html#aa42515b24770fb490b6ceb49b1f62356">port_usart.h</a>
@@ -192,37 +212,29 @@ $(document).ready(function(){initNavTree('globals_p.html',''); initResizable(); 
 : <a class="el" href="port__usart_8c.html#a616cf7d2ed1be55fb0a600133583cb65">port_usart.c</a>
 , <a class="el" href="port__usart_8h.html#a616cf7d2ed1be55fb0a600133583cb65">port_usart.h</a>
 </li>
-<li>port_usart_reset_input_data()
-: <a class="el" href="port__usart_8c.html#a114db427b251e1861fc8c41e5286f301">port_usart.c</a>
-, <a class="el" href="port__usart_8h.html#a114db427b251e1861fc8c41e5286f301">port_usart.h</a>
+<li>port_usart_reset_input_buffer()
+: <a class="el" href="port__usart_8h.html#aced39ee5d2099804c4abc9e2d706c24b">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#aced39ee5d2099804c4abc9e2d706c24b">port_usart.c</a>
 </li>
-<li>port_usart_reset_output_data()
-: <a class="el" href="port__usart_8h.html#aeea9f33a0730b9ad452a6fa28ad84f92">port_usart.h</a>
-, <a class="el" href="port__usart_8c.html#aeea9f33a0730b9ad452a6fa28ad84f92">port_usart.c</a>
+<li>port_usart_reset_output_buffer()
+: <a class="el" href="port__usart_8c.html#a8466a1466a1a519206f00f0440c9efba">port_usart.c</a>
+, <a class="el" href="port__usart_8h.html#a8466a1466a1a519206f00f0440c9efba">port_usart.h</a>
 </li>
 <li>port_usart_rx_done()
-: <a class="el" href="port__usart_8c.html#a480c4193b02d347b4645275a979f43ac">port_usart.c</a>
-, <a class="el" href="port__usart_8h.html#a480c4193b02d347b4645275a979f43ac">port_usart.h</a>
-</li>
-<li>port_usart_send_data()
-: <a class="el" href="port__usart_8c.html#a9859192ef8b12751aab1d2db5a700e9b">port_usart.c</a>
-, <a class="el" href="port__usart_8h.html#a96056b365853690f25bd24263d16927a">port_usart.h</a>
+: <a class="el" href="port__usart_8h.html#a480c4193b02d347b4645275a979f43ac">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#a480c4193b02d347b4645275a979f43ac">port_usart.c</a>
 </li>
 <li>port_usart_store_data()
 : <a class="el" href="port__usart_8c.html#a886ec2f39f0f9e18dd62cfc8d2b563a7">port_usart.c</a>
 , <a class="el" href="port__usart_8h.html#a886ec2f39f0f9e18dd62cfc8d2b563a7">port_usart.h</a>
 </li>
-<li>port_usart_transmission_complete()
-: <a class="el" href="port__usart_8h.html#a6921fcb81cdd000d89ef5e88542922c3">port_usart.h</a>
-, <a class="el" href="port__usart_8c.html#a6921fcb81cdd000d89ef5e88542922c3">port_usart.c</a>
-</li>
 <li>port_usart_tx_done()
-: <a class="el" href="port__usart_8c.html#a88eb25f7c12ae3be9f49df50e7830f3f">port_usart.c</a>
-, <a class="el" href="port__usart_8h.html#a88eb25f7c12ae3be9f49df50e7830f3f">port_usart.h</a>
+: <a class="el" href="port__usart_8h.html#a88eb25f7c12ae3be9f49df50e7830f3f">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#a88eb25f7c12ae3be9f49df50e7830f3f">port_usart.c</a>
 </li>
 <li>port_usart_write_data()
-: <a class="el" href="port__usart_8h.html#a726f80521212a7e8f3505f00e0ddf49f">port_usart.h</a>
-, <a class="el" href="port__usart_8c.html#a726f80521212a7e8f3505f00e0ddf49f">port_usart.c</a>
+: <a class="el" href="port__usart_8c.html#a726f80521212a7e8f3505f00e0ddf49f">port_usart.c</a>
+, <a class="el" href="port__usart_8h.html#a726f80521212a7e8f3505f00e0ddf49f">port_usart.h</a>
 </li>
 <li>POWER_REGULATOR_VOLTAGE_SCALE3
 : <a class="el" href="port__system_8h.html#aba9b17980f912ee6faefbf82071fdeae">port_system.h</a>

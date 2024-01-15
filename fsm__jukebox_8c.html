@@ -354,22 +354,19 @@ false if the message has not been parsed correctly </dd></dl>
 <p>Set the next song to be played. </p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 2:</b></p>
-<p>✅ 1. Send the message "Next song\n" by calling <code><a class="el" href="fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70" title="Set the data to send.">fsm_usart_set_data()</a></code> <br  />
-✅ 2. Update the melody index to select to the next song by increasing this index (<code>melody_idx</code>) by 1. If the result equals or greater than the maximum number of melodies (<code>MELODIES_MEMORY_SIZE</code>), set the index to 0. <br  />
+<p>✅ 1. Print by the ITM terminal the message "Next song\n" by calling <code>printf()</code>. This is only for debugging purposes and will be printed in the ITM terminal of the computer. <br  />
+✅ 2. Update the melody index to select to the next song by increasing this <code>melody_idx</code> in 1. If the result equals or greater than the maximum number of melodies (<code>MELODIES_MEMORY_SIZE</code>), set the index to 0. <br  />
 &#160;&#160;&#160;&#160;💡 You can use the <code>%</code> (modulo) operator to get the remainder of the division <br  />
-✅ 3. Check if the melody exists. A melody exists if the length of the melody is greater than 0. If it exists, Set the name of the melody to be played (<code>p_melody</code>) to the name of the melody selected before. <br  />
- &#160;&#160;&#160;&#160; If it does not exist, set the index of the melody to be played (<code>melody_idx</code>) to 0. <br  />
-✅ 5. Send the message "Playing next song...\n" by calling <code><a class="el" href="fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70" title="Set the data to send.">fsm_usart_set_data()</a></code> <br  />
+✅ 3. Check if the melody exists. A melody exists if the length of the melody is greater than 0. If it exists, Set the name of the melody to be played (<code>p_melody</code>) to the name of the melody selected before. If it does not exist, set the index of the melody to be played (<code>melody_idx</code>) to 0. <br  />
+✅ 4. Print by the ITM terminal the message "Playing: %s\n" by calling <code>printf()</code> with the name of the melody to be played. This is only for debugging purposes and will be printed in the ITM terminal of the computer. <br  />
 </p>
 </blockquote>
 <p><br  />
  </p><blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 3:</b></p>
-<p>✅ 1. Remove the first call to the function <code><a class="el" href="fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70" title="Set the data to send.">fsm_usart_set_data()</a></code> to be substituted with the following code: <br  />
-✅ 2. Stop the buzzer by calling <code>fsm_buzzer_set_status()</code> with the right parameter <br  />
-✅ 3. Remove the second call to the function <code><a class="el" href="fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70" title="Set the data to send.">fsm_usart_set_data()</a></code> to be substituted with the following codes: <br  />
-✅ 4. Set the melody to be played by calling <code>fsm_buzzer_set_melody()</code> properly <br  />
-✅ 5. Set the status of the buzzer to correctly by calling <code>fsm_buzzer_set_status()</code>. After this call, the buzzer will start playing the melody <br  />
+<p>✅ 1. Stop the buzzer by calling <code><a class="el" href="fsm__buzzer_8h.html#a63d85479ddbaed960f1cfbc00476989b" title="Set the status of the player.">fsm_buzzer_set_status()</a></code> with the right parameter <br  />
+✅ 2. Set the melody to be played by calling <code><a class="el" href="fsm__buzzer_8h.html#ab3e512b856b3f53e8deb6e48aa341e8f" title="Set the melody to play.">fsm_buzzer_set_melody()</a></code> properly <br  />
+✅ 3. Set the status of the buzzer correctly by calling <code><a class="el" href="fsm__buzzer_8h.html#a63d85479ddbaed960f1cfbc00476989b" title="Set the status of the player.">fsm_buzzer_set_status()</a></code>. After this call, the buzzer will start playing the melody <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -498,7 +495,7 @@ false </dd></dl>
 <p><br  />
 </p><blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 3:</b></p>
-<p>✅ 1. Return <code>true</code> if the result of calling function <code>fsm_buzzer_get_status()</code> is <code>STOP</code>. Otherwise, return <code>false</code> <br  />
+<p>✅ 1. Return <code>true</code> if the result of calling function <code><a class="el" href="fsm__buzzer_8h.html#a21ac29163340f31d14cb8c135f559846" title="Get the status of the player.">fsm_buzzer_get_status()</a></code> is <code>STOP</code>. Otherwise, return <code>false</code> <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -754,7 +751,7 @@ false </dd></dl>
 &#160;&#160;&#160;&#160;✅ <code>p_message</code> of type <code>char</code> and size <code>USART_INPUT_BUFFER_LENGTH</code> <br  />
 &#160;&#160;&#160;&#160;✅ <code>p_command</code> of type <code>char</code> and size <code>USART_INPUT_BUFFER_LENGTH</code> <br  />
 &#160;&#160;&#160;&#160;✅ <code>p_param</code> of type <code>char</code> and size <code>USART_INPUT_BUFFER_LENGTH</code> <br  />
-✅ 2. Call function <code><a class="el" href="fsm__usart_8h.html#af35ba7efbb8107fc6f206be3f3b6341a" title="Get the data received.">fsm_usart_get_data()</a></code> to get the message received by the USART in the variable <code>p_message</code> <br  />
+✅ 2. Call function <code><a class="el" href="fsm__usart_8h.html#a598ef9863ebd0829e65ddaa94f9264ad" title="Get the data received.">fsm_usart_get_in_data()</a></code> to get the message received by the USART in the variable <code>p_message</code> <br  />
 ✅ 3. Call function <code><a class="el" href="fsm__jukebox_8c.html#aa467014fd4156f5f687426203b75bc45" title="Parse the message received by the USART.">_parse_message()</a></code> to parse the message received by the USART and retrieve the result. Store the result in a boolean variable that indicates if the message is valid or not. This function will also parse the command and the parameter (if available) and store them in the variables <code>p_command</code> and <code>p_param</code> respectively <br  />
 ✅ 4. If the message is valid, call function <code><a class="el" href="fsm__jukebox_8c.html#a01e7f7a7784027fc9217fd0d0f4f2423" title="Execute the command received by the USART.">_execute_command()</a></code> to execute the command received by the USART. <br  />
 ✅ 5. Reset the message received by the USART by calling <code><a class="el" href="fsm__usart_8h.html#afa48c9865ec6f4f4e4cc9c6449e2a6a3" title="Reset the input data buffer.">fsm_usart_reset_input_data()</a></code> <br  />
@@ -993,18 +990,18 @@ false </dd></dl>
 <p>Initialize the Jukebox by playing the intro melody, at the beginning of the program. </p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 2:</b></p>
-<p>✅ 1. Set USART message to send the message "Jukebox ON\n" by calling <code><a class="el" href="fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70" title="Set the data to send.">fsm_usart_set_data()</a></code> <br  />
-✅ 2. Reset the duration of the button by calling <code><a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f" title="Reset the duration of the last button press.">fsm_button_reset_duration()</a></code> <br  />
+<p>✅ 1. Reset the duration of the button by calling <code><a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f" title="Reset the duration of the last button press.">fsm_button_reset_duration()</a></code> <br  />
+✅ 2. Enable RX USART interrupts by calling the right function from the <code>COMMON</code> (FSM) or <code>PORT</code> layers. <br  />
+✅ 3. Print by the ITM terminal the message "Jukebox ON\n" by calling <code>printf()</code>. This is only for debugging purposes and will be printed in the ITM terminal of the computer. <br  />
 </p>
 </blockquote>
 <p><br  />
  <br  />
  </p><blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 3:</b></p>
-<p>✅ 1. Remove the call to the function <code><a class="el" href="fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70" title="Set the data to send.">fsm_usart_set_data()</a></code> to be substituted with the following code: <br  />
-✅ 2. Set the speed of the buzzer to 1.0 by calling <code>fsm_buzzer_set_speed()</code> <br  />
-✅ 3. Set the <code>scale_melody</code> to be played by calling <code>fsm_buzzer_set_melody()</code> properly <br  />
-✅ 4. Set the status of the buzzer to <code>PLAY</code> by calling <code>fsm_buzzer_set_status()</code>. With this the buzzer will start playing the melody <br  />
+<p>✅ 1. Set the speed of the buzzer to 1.0 by calling <code><a class="el" href="fsm__buzzer_8h.html#ac6da02d907f191969f39f6988e07d8d9" title="Set the speed of the player.">fsm_buzzer_set_speed()</a></code> <br  />
+✅ 2. Set the <code>scale_melody</code> to be played by calling <code><a class="el" href="fsm__buzzer_8h.html#ab3e512b856b3f53e8deb6e48aa341e8f" title="Set the melody to play.">fsm_buzzer_set_melody()</a></code> properly <br  />
+✅ 3. Set the status of the buzzer to <code>PLAY</code> by calling <code><a class="el" href="fsm__buzzer_8h.html#a63d85479ddbaed960f1cfbc00476989b" title="Set the status of the player.">fsm_buzzer_set_status()</a></code>. With this the buzzer will start playing the melody <br  />
 &#160;&#160;&#160;&#160;💡 Keep the call to the function <code><a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f" title="Reset the duration of the last button press.">fsm_button_reset_duration()</a></code> <br  />
 </p>
 </blockquote>
@@ -1044,15 +1041,14 @@ false </dd></dl>
 <p>Turn the Jukebox OFF. </p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 2:</b></p>
-<p>✅ 1. Set USART message to send the message "Jukebox OFF\n" by calling <code><a class="el" href="fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70" title="Set the data to send.">fsm_usart_set_data()</a></code> <br  />
-✅ 2. Reset the duration of the button by calling <code><a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f" title="Reset the duration of the last button press.">fsm_button_reset_duration()</a></code> <br  />
+<p>✅ 1. Reset the duration of the button by calling <code><a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f" title="Reset the duration of the last button press.">fsm_button_reset_duration()</a></code> <br  />
+✅ 2. Disable USART interrupts by calling <code><a class="el" href="fsm__usart_8h.html#a3ff2f8934612ba0e45428e3c7b130716" title="Disable the USART RX interrupt.">fsm_usart_disable_rx_interrupt()</a></code> and <code><a class="el" href="fsm__usart_8h.html#a82161f8f68a7f603947322ed29fd9e11" title="Disable the USART TX interrupts.">fsm_usart_disable_tx_interrupt()</a></code>. You can call the functions from the port layer instead of the FSM layer. ✅ 3. Print by the ITM terminal the message "Jukebox OFF\n" by calling <code>printf()</code>. This is only for debugging purposes and will be printed in the ITM terminal of the computer. <br  />
 </p>
 </blockquote>
 <p><br  />
 </p><blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 3:</b></p>
-<p>✅ 1. Remove the call to the function <code><a class="el" href="fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70" title="Set the data to send.">fsm_usart_set_data()</a></code> to be substituted with the following code: <br  />
-✅ 2. Set the status of the buzzer to <code>STOP</code> by calling <code>fsm_buzzer_set_status()</code>. With this the buzzer will stop playing the melody if it was playing <br  />
+<p>✅ 1. Stop the buzzer by calling <code><a class="el" href="fsm__buzzer_8h.html#a63d85479ddbaed960f1cfbc00476989b" title="Set the status of the player.">fsm_buzzer_set_status()</a></code> with the right parameter. With this the buzzer will stop playing the melody if it was playing <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>

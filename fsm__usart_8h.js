@@ -7,9 +7,13 @@ var fsm__usart_8h =
     ] ],
     [ "fsm_usart_check_activity", "fsm__usart_8h.html#a08918108b635f2b0830a186f9a411848", null ],
     [ "fsm_usart_check_data_received", "fsm__usart_8h.html#a8b291fea03bda9ab260602d52479d730", null ],
-    [ "fsm_usart_get_data", "fsm__usart_8h.html#af35ba7efbb8107fc6f206be3f3b6341a", null ],
+    [ "fsm_usart_disable_rx_interrupt", "fsm__usart_8h.html#a3ff2f8934612ba0e45428e3c7b130716", null ],
+    [ "fsm_usart_disable_tx_interrupt", "fsm__usart_8h.html#a82161f8f68a7f603947322ed29fd9e11", null ],
+    [ "fsm_usart_enable_rx_interrupt", "fsm__usart_8h.html#a67b607c851b1935922f7cfc5426246a0", null ],
+    [ "fsm_usart_enable_tx_interrupt", "fsm__usart_8h.html#a2991e3d583473c98e4d990f1c809c9bf", null ],
+    [ "fsm_usart_get_in_data", "fsm__usart_8h.html#a598ef9863ebd0829e65ddaa94f9264ad", null ],
     [ "fsm_usart_init", "fsm__usart_8h.html#aa26c9310b406a5fb08d84bd326123bb0", null ],
     [ "fsm_usart_new", "fsm__usart_8h.html#ae33278a53ca0b6fb1f4ac54576643546", null ],
     [ "fsm_usart_reset_input_data", "fsm__usart_8h.html#afa48c9865ec6f4f4e4cc9c6449e2a6a3", null ],
-    [ "fsm_usart_set_data", "fsm__usart_8h.html#ace3dc2b7e302e4e6659861e832678c70", null ]
+    [ "fsm_usart_set_out_data", "fsm__usart_8h.html#a714f188b6254d7f8ba8a1937d8d918b2", null ]
 ];
