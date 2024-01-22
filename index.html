@@ -153,18 +153,26 @@ Version 2</h1>
 <p>You can start from the <a href="fsm__usart_8c.html">FSM of Version 2</a>.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Version 3</h1>
-<p>In Version 3, the system adds the buzzer. The system uses the following pin with PWM configuration to control the buzzer:</p>
+<p>In Version 3, the system adds the buzzer. The system uses the following pin with <b>PWM</b> configuration to control the buzzer:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Parameter </th><th class="markdownTableHeadNone">Value  </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Pin </td><td class="markdownTableBodyNone">PA6  </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Mode </td><td class="markdownTableBodyNone">Alternative  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Pull up/ down </td><td class="markdownTableBodyNone">No pull  </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Timer </td><td class="markdownTableBodyNone">TIM3  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Channel </td><td class="markdownTableBodyNone">CH1  </td></tr>
+<td class="markdownTableBodyNone">Channel </td><td class="markdownTableBodyNone">(see the Alternate Function table in the datasheet)  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Frequency </td><td class="markdownTableBodyNone">(depends on the note playing)  </td></tr>
+<td class="markdownTableBodyNone">PWM Mode </td><td class="markdownTableBodyNone">PWM Mode 1  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Prescaler </td><td class="markdownTableBodyNone">(depends on the frequency of the note playing)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Period </td><td class="markdownTableBodyNone">(depends on the frequency of the note playing)  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Duty Cycle </td><td class="markdownTableBodyNone">50%  </td></tr>
 </table>
@@ -175,9 +183,9 @@ Version 3</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Timer </td><td class="markdownTableBodyNone">TIM2  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Prescaler </td><td class="markdownTableBodyNone">(depends on the note)  </td></tr>
+<td class="markdownTableBodyNone">Prescaler </td><td class="markdownTableBodyNone">(depends on duration of the the note playing)  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Period </td><td class="markdownTableBodyNone">(depends on the note)  </td></tr>
+<td class="markdownTableBodyNone">Period </td><td class="markdownTableBodyNone">(depends on duration of the the note playing)  </td></tr>
 </table>
 <p>The system uses the TIM2 interrupt to detect the end of the note. The interrupt is configured with the following settings:</p>
 <table class="markdownTable">

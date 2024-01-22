@@ -113,7 +113,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472aca0bad7251bdd17d2537771eb15b76756e">PAUSE_NOTE</a>, 
 <br />
-&#160;&#160;<a class="el" href="fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472acad2cc1e09da0dfc4a9cf748d6b04bb113">WAIT_NOTE</a>
+&#160;&#160;<a class="el" href="fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472acad2cc1e09da0dfc4a9cf748d6b04bb113">WAIT_NOTE</a>, 
+<br />
+&#160;&#160;<a class="el" href="fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472acac0202b0d74192113b5e049c63ebee99b">WAIT_MELODY</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a3baed50b30e39b3703f2f754315472ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerator for the buzzer finite state machine.  <a href="fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472ac">More...</a><br /></td></tr>
@@ -204,6 +206,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a3baed50b30e39b3703f2f754315472aca0bad7251bdd17d2537771eb15b76756e"></a>PAUSE_NOTE&#160;</td><td class="fielddoc"><p>State to pause the player </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3baed50b30e39b3703f2f754315472acad2cc1e09da0dfc4a9cf748d6b04bb113"></a>WAIT_NOTE&#160;</td><td class="fielddoc"><p>State to wait for the duration of the note </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3baed50b30e39b3703f2f754315472acac0202b0d74192113b5e049c63ebee99b"></a>WAIT_MELODY&#160;</td><td class="fielddoc"><p>State to wait for a new melody </p>
 </td></tr>
 </table>
 
@@ -307,10 +311,10 @@ Functions</h2></td></tr>
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Initialize the field <code>buzzer_id</code> with the received value <br  />
 ✅ 2. Initialize the field <code>p_melody</code> to <code>NULL</code> <br  />
-✅ 3. Initialize the field <code>melody_index</code> to 0 <br  />
+✅ 3. Initialize the field <code>note_index</code> to 0 <br  />
 ✅ 4. Initialize the field <code>player_status</code> to <code>STOP</code> <br  />
 ✅ 5. Initialize the field <code>player_speed</code> to 1.0 <br  />
-✅ 6. Call function <code>port_buzzer_init()</code> with the right arguments <br  />
+✅ 6. Call function <code><a class="el" href="port__buzzer_8h.html#a37c661d72c1cd58acb59a26ccf318c5a" title="Configure the HW specifications of a given buzzer melody player.">port_buzzer_init()</a></code> with the right arguments <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -342,7 +346,7 @@ Functions</h2></td></tr>
 <p>Creates a new buzzer finite state machine. </p>
 <p>This FSM implements a buzzer melody player. The buzzer is considered indeed as a melody player. The user can set the melody to play, the speed of the player and the status of the player.</p>
 <p>The FSM stores a pointer to the melody to play in the <code>p_melody</code> variable. The user should set it using the function <code><a class="el" href="fsm__buzzer_8h.html#ab3e512b856b3f53e8deb6e48aa341e8f" title="Set the melody to play.">fsm_buzzer_set_melody()</a></code>.</p>
-<p>The FSM stores the current note of the melody in the <code>melody_index</code> variable. With this variable, the FSM knows which note to play next.</p>
+<p>The FSM stores the current note of the melody in the <code>note_index</code> variable. With this variable, the FSM knows which note to play next.</p>
 <p>The FSM stores the status of the player in the <code>player_status</code> variable. The user should set it using the function <code><a class="el" href="fsm__buzzer_8h.html#a63d85479ddbaed960f1cfbc00476989b" title="Set the status of the player.">fsm_buzzer_set_status()</a></code>. The user can also get it using the function <code><a class="el" href="fsm__buzzer_8h.html#a21ac29163340f31d14cb8c135f559846" title="Get the status of the player.">fsm_buzzer_get_status()</a></code>. The status is not the state of the FSM, but the status of the player. The status of the player can be:</p>
 <ul>
 <li><code>STOP</code>: The player is stopped</li>
@@ -350,10 +354,11 @@ Functions</h2></td></tr>
 <li><code>PAUSE</code>: The player is paused</li>
 </ul>
 <p><b>The main difference between <code>PAUSE</code> and <code>STOP</code> is that when the player is paused, the index of the melody is not reset.</b> This means that if the user resumes the player, the player will continue playing the melody from the note it was playing when it was paused. If the player is stopped, the index of the melody is reset to 0. This means that if the user starts the player again, the player will start playing the melody from the beginning.</p>
-<p>In the state <code>WAIT_START</code>, the FSM waits for the user to start a melody. The user can start a melody by setting the status of the player to <code>PLAY</code>.</p>
+<p>In the state <code>WAIT_START</code>, the FSM waits for the user to start the system. The user can start the player when it turns on the system or when a melody has ended. When the user starts the player, the FSM moves to the state <code>PLAY_NOTE</code>. When a melody has ended, the FSM moves to the state <code>WAIT_MELODY</code>.</p>
 <p>In the state <code>PLAY_NOTE</code>, the FSM can start a note, pause the player or stop the player. In this case it is important the order of the transitions. The FSM checks first if the player must be stopped because of the end of the melody or because the user has stopped it. In both cases the FSM moves to the state <code>WAIT_NOTE</code>. In <code>PLAY_NOTE</code> the FSM also checks if the player must be paused. If the player must be paused, the FSM moves to the state <code>PAUSE_NOTE</code>. If none of the previous conditions are met, from this state the FSM checks if it must start a new note. If it must start a note, the FSM moves to the state <code>WAIT_NOTE</code>.</p>
 <p>In the state <code>PAUSE_NOTE</code>, the FSM pauses the player. The user can pause the player by setting the status of the player to <code>PAUSE</code>. To resume the player, the user must set the status of the player to <code>PLAY</code>.</p>
 <p>In the state <code>WAIT_NOTE</code>, the FSM waits for the duration of the note to finish and moves again to the state <code>PLAY_NOTE</code> to check if it must stop, pause or play a new note.</p>
+<p>In the state <code>WAIT_MELODY</code>, the FSM waits for a new melody to play. The user can set a new melody to play by setting the pointer to the melody to play. The user can also set the status of the player to <code>PLAY</code> to start playing the melody again.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">buzzer_id</td><td>Unique buzzer identifier number </td></tr>
@@ -482,7 +487,7 @@ Functions</h2></td></tr>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Set the field <code>player_status</code> to the received value <br  />
-✅ 2. If the status is <code>STOP</code>, reset the field <code>melody_index</code> <br  />
+✅ 2. If the status is <code>STOP</code>, reset the field <code>note_index</code> <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>

@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('port__buzzer_8h.html',''); initResizab
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structport__buzzer__hw__t.html">port_buzzer_hw_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define the HW dependencies of an infrared transmitter.  <a href="structport__buzzer__hw__t.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define the HW dependencies of a buzzer melody player.  <a href="structport__buzzer__hw__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -117,33 +117,32 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a37c661d72c1cd58acb59a26ccf318c5a"><td class="memItemLeft" align="right" valign="top"><a id="a37c661d72c1cd58acb59a26ccf318c5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>port_buzzer_init</b> (uint32_t buzzer_id)</td></tr>
+<tr class="memitem:a37c661d72c1cd58acb59a26ccf318c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__buzzer_8h.html#a37c661d72c1cd58acb59a26ccf318c5a">port_buzzer_init</a> (uint32_t buzzer_id)</td></tr>
+<tr class="memdesc:a37c661d72c1cd58acb59a26ccf318c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the HW specifications of a given buzzer melody player.  <a href="port__buzzer_8h.html#a37c661d72c1cd58acb59a26ccf318c5a">More...</a><br /></td></tr>
 <tr class="separator:a37c661d72c1cd58acb59a26ccf318c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c63a7b7e2c6cbaf76d8056f33576061"><td class="memItemLeft" align="right" valign="top"><a id="a1c63a7b7e2c6cbaf76d8056f33576061"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>port_buzzer_set_timer_duration</b> (uint32_t buzzer_id, uint32_t duration_ms)</td></tr>
-<tr class="separator:a1c63a7b7e2c6cbaf76d8056f33576061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af56a4749bc494c6bff2bb8c30e447ea5"><td class="memItemLeft" align="right" valign="top"><a id="af56a4749bc494c6bff2bb8c30e447ea5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>port_buzzer_set_pwm_frequency</b> (uint32_t buzzer_id, double frequency_hz)</td></tr>
-<tr class="separator:af56a4749bc494c6bff2bb8c30e447ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a385f66c71f8918fefffc28e71bcbe989"><td class="memItemLeft" align="right" valign="top"><a id="a385f66c71f8918fefffc28e71bcbe989"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>port_buzzer_get_note_timeout</b> (uint32_t buzzer_id)</td></tr>
+<tr class="memitem:ae0607400eb9b14cf11f0d2b521ad86d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__buzzer_8h.html#ae0607400eb9b14cf11f0d2b521ad86d0">port_buzzer_set_note_duration</a> (uint32_t buzzer_id, uint32_t duration_ms)</td></tr>
+<tr class="memdesc:ae0607400eb9b14cf11f0d2b521ad86d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the duration of the timer that controls the duration of the note.  <a href="port__buzzer_8h.html#ae0607400eb9b14cf11f0d2b521ad86d0">More...</a><br /></td></tr>
+<tr class="separator:ae0607400eb9b14cf11f0d2b521ad86d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3084fd2623e9e89c1b959b5f5e7e20c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__buzzer_8h.html#a3084fd2623e9e89c1b959b5f5e7e20c9">port_buzzer_set_note_frequency</a> (uint32_t buzzer_id, double frequency_hz)</td></tr>
+<tr class="memdesc:a3084fd2623e9e89c1b959b5f5e7e20c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the PWM frequency of the timer that controls the frequency of the note.  <a href="port__buzzer_8h.html#a3084fd2623e9e89c1b959b5f5e7e20c9">More...</a><br /></td></tr>
+<tr class="separator:a3084fd2623e9e89c1b959b5f5e7e20c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385f66c71f8918fefffc28e71bcbe989"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__buzzer_8h.html#a385f66c71f8918fefffc28e71bcbe989">port_buzzer_get_note_timeout</a> (uint32_t buzzer_id)</td></tr>
+<tr class="memdesc:a385f66c71f8918fefffc28e71bcbe989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the status of the note end flag.  <a href="port__buzzer_8h.html#a385f66c71f8918fefffc28e71bcbe989">More...</a><br /></td></tr>
 <tr class="separator:a385f66c71f8918fefffc28e71bcbe989"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a272b4e6cb82c7d00d575361a442b9c6b"><td class="memItemLeft" align="right" valign="top"><a id="a272b4e6cb82c7d00d575361a442b9c6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>port_buzzer_stop</b> (uint32_t buzzer_id)</td></tr>
+<tr class="memitem:a272b4e6cb82c7d00d575361a442b9c6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__buzzer_8h.html#a272b4e6cb82c7d00d575361a442b9c6b">port_buzzer_stop</a> (uint32_t buzzer_id)</td></tr>
+<tr class="memdesc:a272b4e6cb82c7d00d575361a442b9c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the PWM output of the timer that controls the frequency of the note and the timer that controls the duration of the note.  <a href="port__buzzer_8h.html#a272b4e6cb82c7d00d575361a442b9c6b">More...</a><br /></td></tr>
 <tr class="separator:a272b4e6cb82c7d00d575361a442b9c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7af932ad5c44fae7e29f4f09fddf495a"><td class="memItemLeft" align="right" valign="top"><a id="a7af932ad5c44fae7e29f4f09fddf495a"></a>
-<a class="el" href="structport__buzzer__hw__t.html">port_buzzer_hw_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__buzzer_8h.html#a7af932ad5c44fae7e29f4f09fddf495a">buzzers_arr</a> []</td></tr>
-<tr class="memdesc:a7af932ad5c44fae7e29f4f09fddf495a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of elements that represents the HW characteristics of the buzzers. <br /></td></tr>
+<tr class="memitem:a7af932ad5c44fae7e29f4f09fddf495a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__buzzer__hw__t.html">port_buzzer_hw_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__buzzer_8h.html#a7af932ad5c44fae7e29f4f09fddf495a">buzzers_arr</a> []</td></tr>
+<tr class="memdesc:a7af932ad5c44fae7e29f4f09fddf495a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of elements that represents the HW characteristics of the buzzers.  <a href="port__buzzer_8h.html#a7af932ad5c44fae7e29f4f09fddf495a">More...</a><br /></td></tr>
 <tr class="separator:a7af932ad5c44fae7e29f4f09fddf495a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for <a class="el" href="port__buzzer_8c.html" title="Portable functions to interact with the buzzer melody player FSM library.">port_buzzer.c</a> file. </p>
 <dl class="section author"><dt>Author</dt><dd>Sistemas Digitales II </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2023-10-01 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-01-01 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a977e3f4e8f80b7c2d7474e499c5cf4ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a977e3f4e8f80b7c2d7474e499c5cf4ee">&#9670;&nbsp;</a></span>BUZZER_0_GPIO</h2>
@@ -202,6 +201,231 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>PWM duty cycle 0-1 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a385f66c71f8918fefffc28e71bcbe989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385f66c71f8918fefffc28e71bcbe989">&#9670;&nbsp;</a></span>port_buzzer_get_note_timeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool port_buzzer_get_note_timeout </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>buzzer_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the status of the note end flag. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Return the value of the <code>note_end</code> flag if the buzzer ID is valid. Otherwise, return false. <br  />
+ </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buzzer_id</td><td>Buzzer melody player ID. This index is used to select the element of the <code>buzzers_arr[]</code> array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a37c661d72c1cd58acb59a26ccf318c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c661d72c1cd58acb59a26ccf318c5a">&#9670;&nbsp;</a></span>port_buzzer_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_buzzer_init </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>buzzer_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the HW specifications of a given buzzer melody player. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call functions to configure the GPIOs and the alternate functions of them. Set no pull up neither pull down connection <br  />
+✅ 2. Configure the timers calling the <b>private</b> functions <code><a class="el" href="port__buzzer_8c.html#a8a74a67606394c1c78a37b674c7ea8d1" title="Configure the timer that controls the duration of the note.">_timer_duration_setup()</a></code> and <code><a class="el" href="port__buzzer_8c.html#a9468700f1074dff44680f6d29d6f09c4" title="Configure the timer that controls the PWM of the buzzer.">_timer_pwm_setup()</a></code> <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buzzer_id</td><td>Buzzer melody player ID. This index is used to select the element of the <code>buzzers_arr[]</code> array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0607400eb9b14cf11f0d2b521ad86d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0607400eb9b14cf11f0d2b521ad86d0">&#9670;&nbsp;</a></span>port_buzzer_set_note_duration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_buzzer_set_note_duration </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>buzzer_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>duration_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the duration of the timer that controls the duration of the note. </p>
+<p>This function is called by the <code><a class="el" href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402" title="Start a note by setting the PWM frequency and the timer duration.">_start_note()</a></code> private function to set the duration of the note in milliseconds.</p>
+<p>Because there could be several notes playing at the same time, each buzzer melody player has its own timer. So, the timer to be configured is selected by the <code>buzzer_id</code> parameter, and you <b>must encapsulate the configuration of the timer in a <code>switch</code> or <code>if</code> statement.</b></p>
+<p><b>Use the timer indicated in the <a href="index.html">main page</a>.</b></p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Disable the timer and reset the counter <br  />
+✅ 2. Compute a temporary value for the <code>ARR</code> register of the timer with the duration of the note <b>in ms</b> considering <code>PSC=0</code> <br  />
+&#160;&#160;&#160;&#160;💡 This is a temporary value because it could be greater than 65536 (or 0xFFFF) <br  />
+✅ 3. Compute the prescaler value and set the PSC register of the timer. <br  />
+&#160;&#160;&#160;&#160;💡 Compute a temporary value of the prescaler starting with 0 and increase it until the value of the ARR register is less than 65536 (or 0xFFFF) <br  />
+ ✅ 4. Set the <code>ARR</code> register of the timer with the temporary value computed in step 2, and set the <code>PSC</code> register with the temporary value computed in step 3 <br  />
+✅ 5. The <code>PSC</code> and <code>ARR</code> values are currently in the preload registers. To load them into the active registers we need an update event. We achieve this by setting the <code>UG</code> bit of the <code>EGR</code> register. It is important to do this at the end of the configuration of the timer. <br  />
+✅ 6. Set the <code>note_end</code> flag to the appropriate value <br  />
+✅ 7. Enable the timer <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buzzer_id</td><td>Buzzer melody player ID. This index is used to select the element of the <code>buzzers_arr[]</code> array </td></tr>
+    <tr><td class="paramname">duration_ms</td><td>Duration of the note in ms </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3084fd2623e9e89c1b959b5f5e7e20c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3084fd2623e9e89c1b959b5f5e7e20c9">&#9670;&nbsp;</a></span>port_buzzer_set_note_frequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_buzzer_set_note_frequency </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>buzzer_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>frequency_hz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the PWM frequency of the timer that controls the frequency of the note. </p>
+<p>This function is called by the <code><a class="el" href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402" title="Start a note by setting the PWM frequency and the timer duration.">_start_note()</a></code> private function to set the frequency of the note in Hz.</p>
+<p>Because there could be several notes playing at the same time, each buzzer melody player has its own timer. So, the timer to be configured is selected by the <code>buzzer_id</code> parameter, and you **must encapsulate the configuration of the timer in a <code>switch</code> or <code>if</code> statement.*</p>
+<p><b>Use the timer indicated in the <a href="index.html">main page</a>.</b></p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. If the frequency is 0, disable the timer and return <br  />
+✅ 2. Disable the timer and reset the counter <br  />
+✅ 3. Compute a temporary value for the <code>ARR</code> register of the timer with the frequency of the note <b>in Hz</b> considering <code>PSC=0</code> <br  />
+&#160;&#160;&#160;&#160;💡 This is a temporary value because it could be greater than 65536 (or 0xFFFF) <br  />
+✅ 4. Compute the prescaler value and set the PSC register of the timer. <br  />
+&#160;&#160;&#160;&#160;💡 Compute a temporary value of the prescaler starting with 0 and increase it until the value of the ARR register is less than 65536 (or 0xFFFF) <br  />
+✅ 5. Set the <code>ARR</code> register of the timer with the temporary value computed in step 3, and set the <code>PSC</code> register with the temporary value computed in step 4 <br  />
+✅ 6. Set the PWM pulse width to <code>BUZZER_PWM_DC</code>. <br  />
+✅ 7. The <code>PSC</code> and <code>ARR</code> values are currently in the preload registers. To load them into the active registers we need an update event. We achieve this by setting the <code>UG</code> bit of the <code>EGR</code> register. It is important to do this at the end of the configuration of the timer. <br  />
+✅ 8. Enable the output compare in the capture/compare mode register of the timer. <br  />
+&#160;&#160;&#160;&#160;💡 Be careful to select the correct channel. Remember that, the channel is defined in the Alternate function table of the datasheet. <br  />
+✅ 9. Enable the timer <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buzzer_id</td><td>Buzzer melody player ID. This index is used to select the element of the <code>buzzers_arr[]</code> array </td></tr>
+    <tr><td class="paramname">frequency_hz</td><td>Frequency of the note in Hz </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a272b4e6cb82c7d00d575361a442b9c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272b4e6cb82c7d00d575361a442b9c6b">&#9670;&nbsp;</a></span>port_buzzer_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_buzzer_stop </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>buzzer_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable the PWM output of the timer that controls the frequency of the note and the timer that controls the duration of the note. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. If the buzzer ID is valid, disable the PWM output of the timer that controls the frequency of the note and also the timer that controls the duration of the note. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buzzer_id</td><td>Buzzer melody player ID. This index is used to select the element of the <code>buzzers_arr[]</code> array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7af932ad5c44fae7e29f4f09fddf495a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af932ad5c44fae7e29f4f09fddf495a">&#9670;&nbsp;</a></span>buzzers_arr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structport__buzzer__hw__t.html">port_buzzer_hw_t</a> buzzers_arr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Array of elements that represents the HW characteristics of the buzzers. </p>
+<p>Array of elements that represents the HW characteristics of the buzzers. </p>
 
 </div>
 </div>

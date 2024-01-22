@@ -26,5 +26,5 @@ var port__usart_8h =
     [ "port_usart_store_data", "port__usart_8h.html#a886ec2f39f0f9e18dd62cfc8d2b563a7", null ],
     [ "port_usart_tx_done", "port__usart_8h.html#a88eb25f7c12ae3be9f49df50e7830f3f", null ],
     [ "port_usart_write_data", "port__usart_8h.html#a726f80521212a7e8f3505f00e0ddf49f", null ],
-    [ "port_usart_hw", "port__usart_8h.html#aa42515b24770fb490b6ceb49b1f62356", null ]
+    [ "usart_arr", "port__usart_8h.html#a069344e9dac66ca26bbe4756ac249f42", null ]
 ];

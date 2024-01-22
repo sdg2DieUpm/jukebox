@@ -94,6 +94,7 @@ $(document).ready(function(){initNavTree('fsm__usart_8c.html',''); initResizable
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="port__usart_8h.html">port_usart.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fsm__usart_8h.html">fsm_usart.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -359,8 +360,11 @@ false </dd></dl>
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Call the right function to reset the output data in the PORT layer before setting a new one <br  />
 ✅ 2. Call function <code><a class="el" href="port__usart_8h.html#a8c1cbe02240b61695846e3fcc37c9e96" title="Copy the message passed as argument to the output buffer of the USART.">port_usart_copy_to_output_buffer()</a></code> to set the data stored in the array <code>out_data</code>. The length of the data are defined by <code>USART_OUTPUT_BUFFER_LENGTH</code> <br  />
-✅ 3. Call function <code><a class="el" href="port__usart_8h.html#a726f80521212a7e8f3505f00e0ddf49f" title="Function to write the data from the output buffer to the USART Data Register.">port_usart_write_data()</a></code> to write the first character to the USART TX register <br  />
-✅ 4. Call function <code><a class="el" href="port__usart_8h.html#aef338f13686b48098077d803ce19c9a9" title="Enable USART TX interrupts.">port_usart_enable_tx_interrupt()</a></code> to enable the USART TX interrupt to start the transmission <br  />
+✅ 3. For security reasons wait until the TXE flag is set to 1 (TX register is empty) <br  />
+&#160;&#160;&#160;&#160;💡 Do a <code>while</code> loop that checks the TXE flag and does nothing until it is set to 1: <br  />
+&#160;&#160;&#160;&#160; Look at section "Código para gestionar el envío y recepción de datos" of the reference book. <br  />
+✅ 4. Call function <code><a class="el" href="port__usart_8h.html#a726f80521212a7e8f3505f00e0ddf49f" title="Function to write the data from the output buffer to the USART Data Register.">port_usart_write_data()</a></code> to write the first character to the USART TX register <br  />
+✅ 5. Call function <code><a class="el" href="port__usart_8h.html#aef338f13686b48098077d803ce19c9a9" title="Enable USART TX interrupts.">port_usart_enable_tx_interrupt()</a></code> to enable the USART TX interrupt to start the transmission <br  />
 </p>
 </blockquote>
 <p><br  />

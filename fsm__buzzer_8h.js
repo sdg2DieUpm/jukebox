@@ -10,7 +10,8 @@ var fsm__buzzer_8h =
       [ "WAIT_START", "fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472acad672f41b357cfe8db0e7b262a428fd66", null ],
       [ "PLAY_NOTE", "fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472aca817ddd6f25d729841c7aed7c3e163bc3", null ],
       [ "PAUSE_NOTE", "fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472aca0bad7251bdd17d2537771eb15b76756e", null ],
-      [ "WAIT_NOTE", "fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472acad2cc1e09da0dfc4a9cf748d6b04bb113", null ]
+      [ "WAIT_NOTE", "fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472acad2cc1e09da0dfc4a9cf748d6b04bb113", null ],
+      [ "WAIT_MELODY", "fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472acac0202b0d74192113b5e049c63ebee99b", null ]
     ] ],
     [ "fsm_buzzer_check_activity", "fsm__buzzer_8h.html#a9ef7bd7bd1aeef564a3506c61201dc98", null ],
     [ "fsm_buzzer_get_status", "fsm__buzzer_8h.html#a21ac29163340f31d14cb8c135f559846", null ],

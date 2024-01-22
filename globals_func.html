@@ -100,6 +100,12 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>_start_note()
 : <a class="el" href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402">fsm_buzzer.c</a>
 </li>
+<li>_timer_duration_setup()
+: <a class="el" href="port__buzzer_8c.html#a8a74a67606394c1c78a37b674c7ea8d1">port_buzzer.c</a>
+</li>
+<li>_timer_pwm_setup()
+: <a class="el" href="port__buzzer_8c.html#a9468700f1074dff44680f6d29d6f09c4">port_buzzer.c</a>
+</li>
 </ul>
 
 
@@ -128,6 +134,9 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>check_melody_finished()
 : <a class="el" href="fsm__jukebox_8c.html#ab86b278e34221a6d9698ecda96db6806">fsm_jukebox.c</a>
 </li>
+<li>check_melody_start()
+: <a class="el" href="fsm__buzzer_8c.html#a50ffa796c3cd76a01a26229f88d367d9">fsm_buzzer.c</a>
+</li>
 <li>check_next_song_button()
 : <a class="el" href="fsm__jukebox_8c.html#ac620719196f7742a5e56bf2b96ca822e">fsm_jukebox.c</a>
 </li>
@@ -146,17 +155,17 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>check_pause()
 : <a class="el" href="fsm__buzzer_8c.html#ade322c878a42b1a35cba782d1a2a923d">fsm_buzzer.c</a>
 </li>
-<li>check_play()
-: <a class="el" href="fsm__buzzer_8c.html#a3d44fde0d2bab0dd806b88a1fc152ddc">fsm_buzzer.c</a>
-</li>
 <li>check_play_note()
 : <a class="el" href="fsm__buzzer_8c.html#af8a1d80bdb758cd594a1318561398790">fsm_buzzer.c</a>
 </li>
 <li>check_player_start()
 : <a class="el" href="fsm__buzzer_8c.html#a4b2cf843f153c34b823c1689becef2e7">fsm_buzzer.c</a>
 </li>
-<li>check_stop_melody()
-: <a class="el" href="fsm__buzzer_8c.html#a9fc0328bcd8064e216e69c94f487d7eb">fsm_buzzer.c</a>
+<li>check_player_stop()
+: <a class="el" href="fsm__buzzer_8c.html#ad931499c529f2a1ccb54051602bbb074">fsm_buzzer.c</a>
+</li>
+<li>check_resume()
+: <a class="el" href="fsm__buzzer_8c.html#a9a9ffdebc7c0139658b97212647fdb8e">fsm_buzzer.c</a>
 </li>
 <li>check_timeout()
 : <a class="el" href="fsm__button_8c.html#ad6f02469ecb017e449a64fffc2feea43">fsm_button.c</a>
@@ -168,11 +177,17 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>do_end_melody()
+: <a class="el" href="fsm__buzzer_8c.html#a5022bbb8a00bf6acda270cbc45035561">fsm_buzzer.c</a>
+</li>
 <li>do_get_data_rx()
 : <a class="el" href="fsm__usart_8c.html#ac49b12d5b878bba461b1b158c3f20e22">fsm_usart.c</a>
 </li>
 <li>do_load_next_song()
 : <a class="el" href="fsm__jukebox_8c.html#a5c3617add85a9641d3109be58b5d7632">fsm_jukebox.c</a>
+</li>
+<li>do_melody_start()
+: <a class="el" href="fsm__buzzer_8c.html#a19cf2fdae46ca3daf674ae19cf5a150a">fsm_buzzer.c</a>
 </li>
 <li>do_note_end()
 : <a class="el" href="fsm__buzzer_8c.html#a50e88c8026c097972bfe7f19111ef78e">fsm_buzzer.c</a>
@@ -180,14 +195,14 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>do_pause()
 : <a class="el" href="fsm__buzzer_8c.html#a92c081dc3b4b447fe2f9aa220c716c5d">fsm_buzzer.c</a>
 </li>
+<li>do_play_note()
+: <a class="el" href="fsm__buzzer_8c.html#a552b4ca96d0ad97d8d2ad0fa1b161120">fsm_buzzer.c</a>
+</li>
 <li>do_player_start()
 : <a class="el" href="fsm__buzzer_8c.html#a9b6ec9630719e46d78d858136d170548">fsm_buzzer.c</a>
 </li>
 <li>do_player_stop()
 : <a class="el" href="fsm__buzzer_8c.html#a7ec465109b1c899aab8742ce398be69b">fsm_buzzer.c</a>
-</li>
-<li>do_player_update()
-: <a class="el" href="fsm__buzzer_8c.html#a1c325cbdc499d5c087a6daa29f10c6fe">fsm_buzzer.c</a>
 </li>
 <li>do_read_command()
 : <a class="el" href="fsm__jukebox_8c.html#a9f8454ef1a723bf60fafd717751223c5">fsm_jukebox.c</a>
@@ -222,9 +237,6 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>do_stop_jukebox()
 : <a class="el" href="fsm__jukebox_8c.html#a7a6d305c45c351fca9a50a2b5d13d9a6">fsm_jukebox.c</a>
 </li>
-<li>do_stop_melody()
-: <a class="el" href="fsm__buzzer_8c.html#a73769365563acf08857e0898cfaffa09">fsm_buzzer.c</a>
-</li>
 <li>do_store_tick_pressed()
 : <a class="el" href="fsm__button_8c.html#a408606e4da6d7f5578eaa4c55586bac4">fsm_button.c</a>
 </li>
@@ -247,16 +259,16 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="fsm__button_8c.html#af21f21b549567572df95fbe18f29b57c">fsm_button.c</a>
 </li>
 <li>fsm_button_get_duration()
-: <a class="el" href="fsm__button_8c.html#adf1e6388ab7f1216269fe912a11cf814">fsm_button.c</a>
-, <a class="el" href="fsm__button_8h.html#adf1e6388ab7f1216269fe912a11cf814">fsm_button.h</a>
+: <a class="el" href="fsm__button_8h.html#adf1e6388ab7f1216269fe912a11cf814">fsm_button.h</a>
+, <a class="el" href="fsm__button_8c.html#adf1e6388ab7f1216269fe912a11cf814">fsm_button.c</a>
 </li>
 <li>fsm_button_init()
 : <a class="el" href="fsm__button_8h.html#a3478c3cda06d0305998a6042ea652604">fsm_button.h</a>
 , <a class="el" href="fsm__button_8c.html#a3478c3cda06d0305998a6042ea652604">fsm_button.c</a>
 </li>
 <li>fsm_button_new()
-: <a class="el" href="fsm__button_8c.html#acf704fc576ceb5a46854212403aae389">fsm_button.c</a>
-, <a class="el" href="fsm__button_8h.html#acf704fc576ceb5a46854212403aae389">fsm_button.h</a>
+: <a class="el" href="fsm__button_8h.html#acf704fc576ceb5a46854212403aae389">fsm_button.h</a>
+, <a class="el" href="fsm__button_8c.html#acf704fc576ceb5a46854212403aae389">fsm_button.c</a>
 </li>
 <li>fsm_button_reset_duration()
 : <a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f">fsm_button.h</a>
@@ -271,8 +283,8 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="fsm__buzzer_8c.html#a21ac29163340f31d14cb8c135f559846">fsm_buzzer.c</a>
 </li>
 <li>fsm_buzzer_init()
-: <a class="el" href="fsm__buzzer_8c.html#a496c577de621e9d16aa9d6497ce7305a">fsm_buzzer.c</a>
-, <a class="el" href="fsm__buzzer_8h.html#a496c577de621e9d16aa9d6497ce7305a">fsm_buzzer.h</a>
+: <a class="el" href="fsm__buzzer_8h.html#a496c577de621e9d16aa9d6497ce7305a">fsm_buzzer.h</a>
+, <a class="el" href="fsm__buzzer_8c.html#a496c577de621e9d16aa9d6497ce7305a">fsm_buzzer.c</a>
 </li>
 <li>fsm_buzzer_new()
 : <a class="el" href="fsm__buzzer_8h.html#ae7bdbdd14bc6ff1741c58c23573da025">fsm_buzzer.h</a>
@@ -303,8 +315,8 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="fsm__usart_8c.html#a08918108b635f2b0830a186f9a411848">fsm_usart.c</a>
 </li>
 <li>fsm_usart_check_data_received()
-: <a class="el" href="fsm__usart_8c.html#a8b291fea03bda9ab260602d52479d730">fsm_usart.c</a>
-, <a class="el" href="fsm__usart_8h.html#a8b291fea03bda9ab260602d52479d730">fsm_usart.h</a>
+: <a class="el" href="fsm__usart_8h.html#a8b291fea03bda9ab260602d52479d730">fsm_usart.h</a>
+, <a class="el" href="fsm__usart_8c.html#a8b291fea03bda9ab260602d52479d730">fsm_usart.c</a>
 </li>
 <li>fsm_usart_disable_rx_interrupt()
 : <a class="el" href="fsm__usart_8h.html#a3ff2f8934612ba0e45428e3c7b130716">fsm_usart.h</a>
@@ -315,12 +327,12 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="fsm__usart_8c.html#a82161f8f68a7f603947322ed29fd9e11">fsm_usart.c</a>
 </li>
 <li>fsm_usart_enable_rx_interrupt()
-: <a class="el" href="fsm__usart_8c.html#a67b607c851b1935922f7cfc5426246a0">fsm_usart.c</a>
-, <a class="el" href="fsm__usart_8h.html#a67b607c851b1935922f7cfc5426246a0">fsm_usart.h</a>
+: <a class="el" href="fsm__usart_8h.html#a67b607c851b1935922f7cfc5426246a0">fsm_usart.h</a>
+, <a class="el" href="fsm__usart_8c.html#a67b607c851b1935922f7cfc5426246a0">fsm_usart.c</a>
 </li>
 <li>fsm_usart_enable_tx_interrupt()
-: <a class="el" href="fsm__usart_8c.html#a2991e3d583473c98e4d990f1c809c9bf">fsm_usart.c</a>
-, <a class="el" href="fsm__usart_8h.html#a2991e3d583473c98e4d990f1c809c9bf">fsm_usart.h</a>
+: <a class="el" href="fsm__usart_8h.html#a2991e3d583473c98e4d990f1c809c9bf">fsm_usart.h</a>
+, <a class="el" href="fsm__usart_8c.html#a2991e3d583473c98e4d990f1c809c9bf">fsm_usart.c</a>
 </li>
 <li>fsm_usart_get_in_data()
 : <a class="el" href="fsm__usart_8h.html#a598ef9863ebd0829e65ddaa94f9264ad">fsm_usart.h</a>
@@ -358,16 +370,36 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="port__button_8c.html#a3721657d1ac1da581da5efec19581b7d">port_button.c</a>
 </li>
 <li>port_button_init()
-: <a class="el" href="port__button_8c.html#a8a60ec4a29c03b384c975a7780082ca3">port_button.c</a>
-, <a class="el" href="port__button_8h.html#a8a60ec4a29c03b384c975a7780082ca3">port_button.h</a>
+: <a class="el" href="port__button_8h.html#a8a60ec4a29c03b384c975a7780082ca3">port_button.h</a>
+, <a class="el" href="port__button_8c.html#a8a60ec4a29c03b384c975a7780082ca3">port_button.c</a>
 </li>
 <li>port_button_is_pressed()
 : <a class="el" href="port__button_8h.html#aba3babbb7f811461f16f7ab309ee660b">port_button.h</a>
 , <a class="el" href="port__button_8c.html#aba3babbb7f811461f16f7ab309ee660b">port_button.c</a>
 </li>
+<li>port_buzzer_get_note_timeout()
+: <a class="el" href="port__buzzer_8h.html#a385f66c71f8918fefffc28e71bcbe989">port_buzzer.h</a>
+, <a class="el" href="port__buzzer_8c.html#a385f66c71f8918fefffc28e71bcbe989">port_buzzer.c</a>
+</li>
+<li>port_buzzer_init()
+: <a class="el" href="port__buzzer_8h.html#a37c661d72c1cd58acb59a26ccf318c5a">port_buzzer.h</a>
+, <a class="el" href="port__buzzer_8c.html#a37c661d72c1cd58acb59a26ccf318c5a">port_buzzer.c</a>
+</li>
+<li>port_buzzer_set_note_duration()
+: <a class="el" href="port__buzzer_8h.html#ae0607400eb9b14cf11f0d2b521ad86d0">port_buzzer.h</a>
+, <a class="el" href="port__buzzer_8c.html#ae0607400eb9b14cf11f0d2b521ad86d0">port_buzzer.c</a>
+</li>
+<li>port_buzzer_set_note_frequency()
+: <a class="el" href="port__buzzer_8h.html#a3084fd2623e9e89c1b959b5f5e7e20c9">port_buzzer.h</a>
+, <a class="el" href="port__buzzer_8c.html#a3084fd2623e9e89c1b959b5f5e7e20c9">port_buzzer.c</a>
+</li>
+<li>port_buzzer_stop()
+: <a class="el" href="port__buzzer_8h.html#a272b4e6cb82c7d00d575361a442b9c6b">port_buzzer.h</a>
+, <a class="el" href="port__buzzer_8c.html#a272b4e6cb82c7d00d575361a442b9c6b">port_buzzer.c</a>
+</li>
 <li>port_system_delay_ms()
-: <a class="el" href="port__system_8c.html#ae6ca17ba9c9d055d442cf1e4a73be046">port_system.c</a>
-, <a class="el" href="port__system_8h.html#ae6ca17ba9c9d055d442cf1e4a73be046">port_system.h</a>
+: <a class="el" href="port__system_8h.html#ae6ca17ba9c9d055d442cf1e4a73be046">port_system.h</a>
+, <a class="el" href="port__system_8c.html#ae6ca17ba9c9d055d442cf1e4a73be046">port_system.c</a>
 </li>
 <li>port_system_delay_until_ms()
 : <a class="el" href="port__system_8h.html#aea53d22d21120e209983ae0753b35d87">port_system.h</a>
@@ -382,8 +414,8 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="port__system_8c.html#aedba1c00f3e11b81226406c03db75c14">port_system.c</a>
 </li>
 <li>port_system_gpio_config_alternate()
-: <a class="el" href="port__system_8c.html#a69b13031e799a6a96aa8143cb4432f94">port_system.c</a>
-, <a class="el" href="port__system_8h.html#a69b13031e799a6a96aa8143cb4432f94">port_system.h</a>
+: <a class="el" href="port__system_8h.html#a69b13031e799a6a96aa8143cb4432f94">port_system.h</a>
+, <a class="el" href="port__system_8c.html#a69b13031e799a6a96aa8143cb4432f94">port_system.c</a>
 </li>
 <li>port_system_gpio_config_exti()
 : <a class="el" href="port__system_8h.html#aaaa8d7afcf0ca35642667612a2dc0b27">port_system.h</a>
@@ -414,8 +446,8 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="port__system_8c.html#a128d80ffebb4b4feadb28e757ac257cc">port_system.c</a>
 </li>
 <li>port_system_power_sleep()
-: <a class="el" href="port__system_8c.html#a2f12a1509a5dbbfa74283bfe22464be5">port_system.c</a>
-, <a class="el" href="port__system_8h.html#a5dcdf1cde8372fa1893e1c8f2baf6e55">port_system.h</a>
+: <a class="el" href="port__system_8h.html#a5dcdf1cde8372fa1893e1c8f2baf6e55">port_system.h</a>
+, <a class="el" href="port__system_8c.html#a2f12a1509a5dbbfa74283bfe22464be5">port_system.c</a>
 </li>
 <li>port_system_power_stop()
 : <a class="el" href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">port_system.h</a>
@@ -438,8 +470,8 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="port__system_8c.html#ac2df29052308e4d654c413acd4cad742">port_system.c</a>
 </li>
 <li>port_usart_copy_to_output_buffer()
-: <a class="el" href="port__usart_8c.html#a536fbc96929ebf43704c6e5a1c2304fe">port_usart.c</a>
-, <a class="el" href="port__usart_8h.html#a8c1cbe02240b61695846e3fcc37c9e96">port_usart.h</a>
+: <a class="el" href="port__usart_8h.html#a8c1cbe02240b61695846e3fcc37c9e96">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#a536fbc96929ebf43704c6e5a1c2304fe">port_usart.c</a>
 </li>
 <li>port_usart_disable_rx_interrupt()
 : <a class="el" href="port__usart_8h.html#aab957e700177e0f22e5597fd3360e365">port_usart.h</a>
@@ -466,20 +498,20 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 , <a class="el" href="port__usart_8c.html#a616cf7d2ed1be55fb0a600133583cb65">port_usart.c</a>
 </li>
 <li>port_usart_reset_input_buffer()
-: <a class="el" href="port__usart_8c.html#aced39ee5d2099804c4abc9e2d706c24b">port_usart.c</a>
-, <a class="el" href="port__usart_8h.html#aced39ee5d2099804c4abc9e2d706c24b">port_usart.h</a>
+: <a class="el" href="port__usart_8h.html#aced39ee5d2099804c4abc9e2d706c24b">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#aced39ee5d2099804c4abc9e2d706c24b">port_usart.c</a>
 </li>
 <li>port_usart_reset_output_buffer()
 : <a class="el" href="port__usart_8h.html#a8466a1466a1a519206f00f0440c9efba">port_usart.h</a>
 , <a class="el" href="port__usart_8c.html#a8466a1466a1a519206f00f0440c9efba">port_usart.c</a>
 </li>
 <li>port_usart_rx_done()
-: <a class="el" href="port__usart_8c.html#a480c4193b02d347b4645275a979f43ac">port_usart.c</a>
-, <a class="el" href="port__usart_8h.html#a480c4193b02d347b4645275a979f43ac">port_usart.h</a>
+: <a class="el" href="port__usart_8h.html#a480c4193b02d347b4645275a979f43ac">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#a480c4193b02d347b4645275a979f43ac">port_usart.c</a>
 </li>
 <li>port_usart_store_data()
-: <a class="el" href="port__usart_8c.html#a886ec2f39f0f9e18dd62cfc8d2b563a7">port_usart.c</a>
-, <a class="el" href="port__usart_8h.html#a886ec2f39f0f9e18dd62cfc8d2b563a7">port_usart.h</a>
+: <a class="el" href="port__usart_8h.html#a886ec2f39f0f9e18dd62cfc8d2b563a7">port_usart.h</a>
+, <a class="el" href="port__usart_8c.html#a886ec2f39f0f9e18dd62cfc8d2b563a7">port_usart.c</a>
 </li>
 <li>port_usart_tx_done()
 : <a class="el" href="port__usart_8h.html#a88eb25f7c12ae3be9f49df50e7830f3f">port_usart.h</a>
@@ -501,6 +533,13 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 </li>
 <li>SysTick_Handler()
 : <a class="el" href="interr_8c.html#ab5e09814056d617c521549e542639b7e">interr.c</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>TIM2_IRQHandler()
+: <a class="el" href="interr_8c.html#a38ad4725462bdc5e86c4ead4f04b9fc2">interr.c</a>
 </li>
 </ul>
 
