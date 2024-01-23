@@ -357,12 +357,12 @@ false if the message has not been parsed correctly </dd></dl>
 <p>✅ 1. Print by the ITM terminal the message "Next song\n" by calling <code>printf()</code>. This is only for debugging purposes and will be printed in the ITM terminal of the computer. <br  />
 ✅ 2. Update the melody index to select to the next song by increasing this <code>melody_idx</code> in 1. If the result equals or greater than the maximum number of melodies (<code>MELODIES_MEMORY_SIZE</code>), set the index to 0. <br  />
 &#160;&#160;&#160;&#160;💡 You can use the <code>%</code> (modulo) operator to get the remainder of the division <br  />
-✅ 3. Check if the melody exists. A melody exists if the length of the melody is greater than 0. If it exists, Set the name of the melody to be played (<code>p_melody</code>) to the name of the melody selected before. If it does not exist, set the index of the melody to be played (<code>melody_idx</code>) to 0. <br  />
+✅ 3. Check if the melody exists. A melody exists if the length of the melody is greater than 0. If it does not exist, set the index of the melody to be played (<code>melody_idx</code>) to 0. After updating the <code>melody_idx</code> the name of the melody to be played (<code>p_melody</code>) to the name of the melody selected before. <br  />
 ✅ 4. Print by the ITM terminal the message "Playing: %s\n" by calling <code>printf()</code> with the name of the melody to be played. This is only for debugging purposes and will be printed in the ITM terminal of the computer. <br  />
 </p>
 </blockquote>
 <p><br  />
- </p><blockquote class="doxtable">
+</p><blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 3:</b></p>
 <p>✅ 1. Stop the buzzer by calling <code><a class="el" href="fsm__buzzer_8h.html#a63d85479ddbaed960f1cfbc00476989b" title="Set the status of the player.">fsm_buzzer_set_status()</a></code> with the right parameter <br  />
 ✅ 2. Set the melody to be played by calling <code><a class="el" href="fsm__buzzer_8h.html#ab3e512b856b3f53e8deb6e48aa341e8f" title="Set the melody to play.">fsm_buzzer_set_melody()</a></code> properly <br  />
@@ -996,8 +996,7 @@ false </dd></dl>
 </p>
 </blockquote>
 <p><br  />
- <br  />
- </p><blockquote class="doxtable">
+</p><blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 3:</b></p>
 <p>✅ 1. Set the speed of the buzzer to 1.0 by calling <code><a class="el" href="fsm__buzzer_8h.html#ac6da02d907f191969f39f6988e07d8d9" title="Set the speed of the player.">fsm_buzzer_set_speed()</a></code> <br  />
 ✅ 2. Set the <code>scale_melody</code> to be played by calling <code><a class="el" href="fsm__buzzer_8h.html#ab3e512b856b3f53e8deb6e48aa341e8f" title="Set the melody to play.">fsm_buzzer_set_melody()</a></code> properly <br  />

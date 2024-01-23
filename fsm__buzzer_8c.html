@@ -138,9 +138,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a92c081dc3b4b447fe2f9aa220c716c5d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a92c081dc3b4b447fe2f9aa220c716c5d">do_pause</a> (fsm_t *p_this)</td></tr>
 <tr class="memdesc:a92c081dc3b4b447fe2f9aa220c716c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the player.  <a href="fsm__buzzer_8c.html#a92c081dc3b4b447fe2f9aa220c716c5d">More...</a><br /></td></tr>
 <tr class="separator:a92c081dc3b4b447fe2f9aa220c716c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a66126a3681a83db0d83990a8d63f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a19a66126a3681a83db0d83990a8d63f4">do_resume</a> (fsm_t *p_this)</td></tr>
-<tr class="memdesc:a19a66126a3681a83db0d83990a8d63f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume the player.  <a href="fsm__buzzer_8c.html#a19a66126a3681a83db0d83990a8d63f4">More...</a><br /></td></tr>
-<tr class="separator:a19a66126a3681a83db0d83990a8d63f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ec465109b1c899aab8742ce398be69b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__buzzer_8c.html#a7ec465109b1c899aab8742ce398be69b">do_player_stop</a> (fsm_t *p_this)</td></tr>
 <tr class="memdesc:a7ec465109b1c899aab8742ce398be69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the player.  <a href="fsm__buzzer_8c.html#a7ec465109b1c899aab8742ce398be69b">More...</a><br /></td></tr>
 <tr class="separator:a7ec465109b1c899aab8742ce398be69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -733,7 +730,6 @@ false </dd></dl>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Call the corresponding function from <code>PORT</code> that stops the PWM and the timer <br  />
-✅ 2. Update the status of the player <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -858,46 +854,6 @@ false </dd></dl>
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Call the corresponding function from <code>PORT</code> that stops the PWM and the timer <br  />
 ✅ 2. Reset the index of the melody <br  />
-</p>
-</blockquote>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p_this</td><td>Pointer to an <code>fsm_t</code> struct than contains an <code><a class="el" href="structfsm__buzzer__t.html" title="Structure to define the Buzzer FSM.">fsm_buzzer_t</a></code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a19a66126a3681a83db0d83990a8d63f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19a66126a3681a83db0d83990a8d63f4">&#9670;&nbsp;</a></span>do_resume()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void do_resume </td>
-          <td>(</td>
-          <td class="paramtype">fsm_t *&#160;</td>
-          <td class="paramname"><em>p_this</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Resume the player. </p>
-<p>This function resumes the player and continues playing the melody from the note it was playing when it was paused. This function is called when the player is set to play again.</p>
-<blockquote class="doxtable">
-<p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. It only updates the status of the player <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>

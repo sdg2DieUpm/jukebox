@@ -94,6 +94,9 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="caption">
 Jukebox Demo</div></div>
     </a></p>
+<blockquote class="doxtable">
+<p>⚠️ <b>WARNING!</b> The TX pin of the microcontroller is connected to the RX pin of the USB-USART converter and vice versa. Be sure that the pins are connected correctly. </p>
+</blockquote>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Version 1</h1>
 <p>In Version 1, the system works with the user button only. The user button is connected to the pin PC13. The code uses the EXTI13 interrupt to detect the button press.</p>
@@ -118,6 +121,10 @@ Version 1</h1>
 <td class="markdownTableBodyNone">Debounce time </td><td class="markdownTableBodyNone">100-200 ms  </td></tr>
 </table>
 <p>You can start from the <a href="fsm__button_8c.html">FSM of Version 1</a>.</p>
+<ul>
+<li>Here you can find the <b>project</b> with the basic configuration: <a href="https://github.com/sdg2DieUpm/jukebox">Jukebox Project</a>.</li>
+<li>Here you can find the <b>test files</b> for Version 1: <a href="https://github.com/sdg2DieUpm/jukebox/tree/jukebox_v1_test">V1 test files</a></li>
+</ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Version 2</h1>
 <p>In Version 2, the system works adds the serial communication. The code uses the USART3 port to receive the commands from the computer. The commands are implemented in Version 4.</p>
@@ -151,6 +158,11 @@ Version 2</h1>
 <td class="markdownTableBodyNone">Subpriority </td><td class="markdownTableBodyNone">0  </td></tr>
 </table>
 <p>You can start from the <a href="fsm__usart_8c.html">FSM of Version 2</a>.</p>
+<ul>
+<li>Here you can find the files needed for the <b>serial communication</b>: <a href="https://github.com/sdg2DieUpm/jukebox/tree/jukebox_v2">Files for Version 2</a></li>
+<li>Here you can find the files for the <b>FSM Jukebox</b>: <a href="https://github.com/sdg2DieUpm/jukebox/tree/jukebox_v2_system">Files for Jukebox in Version 2</a></li>
+<li>Here you can find the <b>test files</b> for Version 2: <a href="https://github.com/sdg2DieUpm/jukebox/tree/jukebox_v2_test">V2 test files</a></li>
+</ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Version 3</h1>
 <p>In Version 3, the system adds the buzzer. The system uses the following pin with <b>PWM</b> configuration to control the buzzer:</p>
@@ -194,11 +206,15 @@ Version 3</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Interrupt </td><td class="markdownTableBodyNone">TIM2_IRQHandler  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Priority </td><td class="markdownTableBodyNone">1  </td></tr>
+<td class="markdownTableBodyNone">Priority </td><td class="markdownTableBodyNone">3  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Subpriority </td><td class="markdownTableBodyNone">0  </td></tr>
 </table>
 <p>You can start from the <a href="fsm__buzzer_8c.html">FSM of Version 3</a>.</p>
+<ul>
+<li>Here you can find the files needed for the <b>buzzer music player</b>: <a href="https://github.com/sdg2DieUpm/jukebox/tree/jukebox_v3">Files for Version 3</a></li>
+<li>Here you can find the <b>test files</b> for Version 3: <a href="https://github.com/sdg2DieUpm/jukebox/tree/jukebox_v3_test">V3 test files</a></li>
+</ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Version 4</h1>
 <p>In Version 4 the system completes its FSM to interact with the user button and the serial communication. In this version it is also managed the <b>sleep mode</b> of the system. The systems sleeps constantly and awakes on the user button press or on the serial communication.</p>
@@ -243,7 +259,7 @@ License</h1>
 <h1><a class="anchor" id="autotoc_md10"></a>
 Acknowledgments</h1>
 <ul>
-<li><b>Amadeo De Gracia</b> - email: <a href="#" onclick="location.href='mai'+'lto:'+'ama'+'de'+'o.d'+'eg'+'rac'+'ia'+'@up'+'m.'+'es'; return false;">amadeo.degracia@upm.es</a> </li>
+<li><b>Amadeo De Gracia</b> - email: <a href="#" onclick="location.href='mai'+'lto:'+'ama'+'de'+'o.d'+'eg'+'rac'+'ia'+'@up'+'m.'+'es'; return false;">amadeo.degracia@upm.es</a> and all professors of the <b>SDG2</b> subject. </li>
 </ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

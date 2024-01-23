@@ -16,7 +16,6 @@ var fsm__buzzer_8c =
     [ "do_play_note", "fsm__buzzer_8c.html#a552b4ca96d0ad97d8d2ad0fa1b161120", null ],
     [ "do_player_start", "fsm__buzzer_8c.html#a9b6ec9630719e46d78d858136d170548", null ],
     [ "do_player_stop", "fsm__buzzer_8c.html#a7ec465109b1c899aab8742ce398be69b", null ],
-    [ "do_resume", "fsm__buzzer_8c.html#a19a66126a3681a83db0d83990a8d63f4", null ],
     [ "fsm_buzzer_check_activity", "fsm__buzzer_8c.html#a9ef7bd7bd1aeef564a3506c61201dc98", null ],
     [ "fsm_buzzer_get_status", "fsm__buzzer_8c.html#a21ac29163340f31d14cb8c135f559846", null ],
     [ "fsm_buzzer_init", "fsm__buzzer_8c.html#a496c577de621e9d16aa9d6497ce7305a", null ],
