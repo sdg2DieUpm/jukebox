@@ -1,6 +1,6 @@
-# Jukebox Version 2 support files (system integration)
+# Jukebox support files (system integration)
 
-This folder contains the support files for the system integration of the Jukebox Version 2 project.
+This folder contains the support files for the system integration of the Jukebox project.
 
 **Attention**
 

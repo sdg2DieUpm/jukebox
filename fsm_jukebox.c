@@ -74,13 +74,12 @@ bool _parse_message(char *p_message, char *p_command, char *p_param)
 
 
 /* Public functions */
-fsm_t *fsm_jukebox_new(fsm_t *p_fsm_button, uint32_t on_off_press_time_ms, fsm_t *p_fsm_usart)
+fsm_t *fsm_jukebox_new(fsm_t *p_fsm_button, uint32_t on_off_press_time_ms, fsm_t *p_fsm_usart, fsm_t *p_fsm_buzzer, uint32_t next_song_press_time_ms)
 {
     fsm_t *p_fsm = malloc(sizeof(fsm_jukebox_t));
 
-    // FOR VERSION 2 ONLY:
-    fsm_jukebox_init(p_fsm, p_fsm_button, on_off_press_time_ms, p_fsm_usart);
-
+    fsm_jukebox_init(p_fsm, p_fsm_button, on_off_press_time_ms, p_fsm_usart, p_fsm_buzzer, next_song_press_time_ms);
+    
     return p_fsm;
 }
 
