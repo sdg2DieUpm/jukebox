@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('fsm__jukebox_8h.html',''); initResizab
 <p>Header for <a class="el" href="fsm__jukebox_8c.html" title="Jukebox FSM main file.">fsm_jukebox.c</a> file.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &quot;fsm.h&quot;</code><br />
+<code>#include &lt;fsm.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="melodies_8h.html">melodies.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -177,9 +177,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="abdf54306266ae93f1f99b64ff95e4c8fad7d715a85860f95a6bc552d7bd02dcd5"></a>WAIT_COMMAND&#160;</td><td class="fielddoc"><p>State to wait for a command from the USART </p>
 </td></tr>
-<tr><td class="fieldname"><a id="abdf54306266ae93f1f99b64ff95e4c8fa30dd63ccd40677f8b3eb01f8ad352ce7"></a>SLEEP_WHILE_OFF&#160;</td><td class="fielddoc"><p><b>State added in Version 4</b> State to start the low power mode while the Jukebox is OFF </p>
+<tr><td class="fieldname"><a id="abdf54306266ae93f1f99b64ff95e4c8fa30dd63ccd40677f8b3eb01f8ad352ce7"></a>SLEEP_WHILE_OFF&#160;</td><td class="fielddoc"><p>State to start the low power mode while the Jukebox is OFF </p>
 </td></tr>
-<tr><td class="fieldname"><a id="abdf54306266ae93f1f99b64ff95e4c8facfc8a9bfe175888d8890411703c267f4"></a>SLEEP_WHILE_ON&#160;</td><td class="fielddoc"><p><b>State added in Version 4</b> State to start the low power mode while the Jukebox is ON </p>
+<tr><td class="fieldname"><a id="abdf54306266ae93f1f99b64ff95e4c8facfc8a9bfe175888d8890411703c267f4"></a>SLEEP_WHILE_ON&#160;</td><td class="fielddoc"><p>State to start the low power mode while the Jukebox is ON </p>
 </td></tr>
 </table>
 
@@ -239,22 +239,15 @@ Functions</h2></td></tr>
 <p>Initialize a jukebox FSM. </p>
 <p>This function initializes the default values of the FSM struct and calls to the <code>port</code> to initialize the HW of associated to the given ID.</p>
 <blockquote class="doxtable">
-<p><b>TO-DO alumnos Version 2:</b></p>
+<p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Call function <code>fsm_init()</code> with the received pointer to <code>fsm_t</code> and the transition table <br  />
-✅ 2. Initialize the fields <code>p_fsm_button</code>, <code>on_off_press_time_ms</code> and <code>p_fsm_usart</code> of <code>p_fsm</code> with the received values <br  />
+✅ 2. Initialize the fields <code>p_fsm_button</code>, <code>on_off_press_time_ms</code>, <code>p_fsm_usart</code>, <code>p_fsm_buzzer</code>, and <code>next_song_press_time_ms</code> of <code>p_fsm</code> with the received values <br  />
 ✅ 3. Initialize the field that represents the melody index to <code>0</code> <br  />
 ✅ 4. Reset the array of melodies to <code>0</code>. This will be used to know if a melody has been loaded or not <br  />
 &#160;&#160;&#160;&#160;💡 Use the function <code>memset()</code> to reset the array of melodies <br  />
 &#160;&#160;&#160;&#160;💡 Use <code>sizeof(p_fsm_jukebox-&gt;melodies)</code> to get the size of the array of melodies <br  />
 ✅ 5. Load the melodies defined in <code><a class="el" href="melodies_8c.html" title="Melodies source file.">melodies.c</a></code> file to the array of melodies <br  />
 &#160;&#160;&#160;&#160;💡 To do it you only need to store <b>each melody variable of type <code><a class="el" href="structmelody__t.html" title="Structure to define the Buzzer melody player FSM.">melody_t</a></code> that you want to include</b> in the array of melodies. e.g.: <code>p_fsm_jukebox-&gt;melodies[0] = scale_melody;</code> to store the <code>scale_melody</code> in the first position of the array of melodies <br  />
-</p>
-</blockquote>
-<p><br  />
-</p><blockquote class="doxtable">
-<p><b>TO-DO alumnos Version 3:</b></p>
-<p>✅ 1. Call function <code>fsm_init()</code> with the received pointer to <code>fsm_t</code> and the transition table <br  />
-✅ 2. Initialize the remaining fields of <code>p_fsm_buzzer</code> and <code>next_song_press_time_ms</code> of <code>p_fsm</code> with the received values <br  />
 </p>
 </blockquote>
 
@@ -332,8 +325,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">p_fsm_button</td><td>Pointer to the button FSM </td></tr>
     <tr><td class="paramname">on_off_press_time_ms</td><td>Button press time in milliseconds to turn the system ON or OFF </td></tr>
     <tr><td class="paramname">p_fsm_usart</td><td>Pointer to the USART FSM </td></tr>
-    <tr><td class="paramname">p_fsm_buzzer</td><td>Pointer to the buzzer FSM. <b>Added in Version 3</b> </td></tr>
-    <tr><td class="paramname">next_song_press_time_ms</td><td>Button press time in milliseconds to change to the next song. <b>Added in Version 3</b></td></tr>
+    <tr><td class="paramname">p_fsm_buzzer</td><td>Pointer to the buzzer FSM. </td></tr>
+    <tr><td class="paramname">next_song_press_time_ms</td><td>Button press time in milliseconds to change to the next song.</td></tr>
   </table>
   </dd>
 </dl>

@@ -1188,7 +1188,7 @@ AFRHy: Alternate function selection for port x pin y (y = 8..15)</dd></dl>
 
 <p>Set the system in <b>sleep mode</b> for low power consumption. </p>
 <p>The function sets the state of the power regulator in <b>sleep mode</b>. <br  />
-After that, the function sets the system mode in sleep mode, to enter in <b>sleep mode</b> when calling <code>_WFI()</code> (wait for interruption). <br  />
+After that, the function sets the system mode in sleep mode, to enter in <b>sleep mode</b> when calling <code>__WFI()</code> (wait for interruption). <br  />
 The system remains in this line until an external interruption or timer interruption occurs. <br  />
  </p><blockquote class="doxtable">
 <p><b>ONLY IF YOU NEED IT! TO-DO alumnos Version 4:</b></p>
@@ -1222,7 +1222,7 @@ The system remains in this line until an external interruption or timer interrup
 
 <p>Set the system in <b>stop mode</b> for low power consumption. </p>
 <p>The function sets the state of the power regulator in <b>stop mode</b>. <br  />
-After that, the function sets the system mode in sleep mode, to enter in <b>stop mode</b> when calling <code>_WFI()</code> (wait for interruption). <br  />
+After that, the function sets the system mode in sleep mode, to enter in <b>stop mode</b> when calling <code>__WFI()</code> (wait for interruption). <br  />
 The system remains in this line until an external interruption or timer interruption occurs. <br  />
 If an interruption occurs the system wakes up and resets the system mode.</p>
 <blockquote class="doxtable">
@@ -1292,7 +1292,7 @@ If an interruption occurs the system wakes up and resets the system mode.</p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos Version 4:</b></p>
 <p>✅ 1. Call function <code><a class="el" href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f" title="Suspend Tick increment.">port_system_systick_suspend()</a></code> to suspend the count of the SysTick. <br  />
-✅ 2. Call function <code><a class="el" href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2" title="Set the system in stop mode for low power consumption.">port_system_power_stop()</a></code> to enter sleep in <b>stop mode</b>. <br  />
+✅ 2. Call function <code><a class="el" href="port__system_8h.html#a5dcdf1cde8372fa1893e1c8f2baf6e55" title="Set the system in sleep mode for low power consumption.">port_system_power_sleep()</a></code> to enter sleep in <b>sleep mode</b>. <br  />
 </p>
 </blockquote>
 

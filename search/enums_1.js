@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['fsm_5fbutton_539',['FSM_BUTTON',['../fsm__button_8h.html#acd7caaebd935f2c31359e79110f682b6',1,'fsm_button.h']]],
-  ['fsm_5fbuzzer_540',['FSM_BUZZER',['../fsm__buzzer_8h.html#a3baed50b30e39b3703f2f754315472ac',1,'fsm_buzzer.h']]],
-  ['fsm_5fjukebox_541',['FSM_JUKEBOX',['../fsm__jukebox_8h.html#abdf54306266ae93f1f99b64ff95e4c8f',1,'fsm_jukebox.h']]],
-  ['fsm_5fusart_542',['FSM_USART',['../fsm__usart_8h.html#aacd641ac4017ace755888ec95f513578',1,'fsm_usart.h']]]
+  ['user_5factions_542',['USER_ACTIONS',['../fsm__buzzer_8h.html#a36e18fdca922ea4b0be3ba4732f103dd',1,'fsm_buzzer.h']]]
 ];

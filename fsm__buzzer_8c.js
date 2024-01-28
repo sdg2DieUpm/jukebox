@@ -17,11 +17,11 @@ var fsm__buzzer_8c =
     [ "do_player_start", "fsm__buzzer_8c.html#a9b6ec9630719e46d78d858136d170548", null ],
     [ "do_player_stop", "fsm__buzzer_8c.html#a7ec465109b1c899aab8742ce398be69b", null ],
     [ "fsm_buzzer_check_activity", "fsm__buzzer_8c.html#a9ef7bd7bd1aeef564a3506c61201dc98", null ],
-    [ "fsm_buzzer_get_status", "fsm__buzzer_8c.html#a21ac29163340f31d14cb8c135f559846", null ],
+    [ "fsm_buzzer_get_action", "fsm__buzzer_8c.html#a154db75bb16bee2ad854f0ea02515f49", null ],
     [ "fsm_buzzer_init", "fsm__buzzer_8c.html#a496c577de621e9d16aa9d6497ce7305a", null ],
     [ "fsm_buzzer_new", "fsm__buzzer_8c.html#ae7bdbdd14bc6ff1741c58c23573da025", null ],
+    [ "fsm_buzzer_set_action", "fsm__buzzer_8c.html#a4553c95f049f176b43a17e089d384877", null ],
     [ "fsm_buzzer_set_melody", "fsm__buzzer_8c.html#ab3e512b856b3f53e8deb6e48aa341e8f", null ],
     [ "fsm_buzzer_set_speed", "fsm__buzzer_8c.html#ac6da02d907f191969f39f6988e07d8d9", null ],
-    [ "fsm_buzzer_set_status", "fsm__buzzer_8c.html#a63d85479ddbaed960f1cfbc00476989b", null ],
-    [ "fsm_trans_tx", "fsm__buzzer_8c.html#ab5d3dbed8b703b2d531f12cc2e2d9279", null ]
+    [ "fsm_trans_buzzer", "fsm__buzzer_8c.html#aa21422a09749d1bf21dc7524aea31bc2", null ]
 ];

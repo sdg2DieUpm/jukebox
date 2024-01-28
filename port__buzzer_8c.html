@@ -177,6 +177,7 @@ Variables</h2></td></tr>
 
 <p>Configure the timer that controls the duration of the note. </p>
 <p>This function is called by the <code><a class="el" href="port__buzzer_8c.html#a37c661d72c1cd58acb59a26ccf318c5a" title="Configure the HW specifications of a given buzzer melody player.">port_buzzer_init()</a></code> public function to configure the timer that controls the duration of the note.</p>
+<p>Because there could be several notes playing at the same time, each buzzer melody player has its own timer. So, the timer to be configured is selected by the <code>buzzer_id</code> parameter, and you **must encapsulate the configuration of the timer in a <code>switch</code> or <code>if</code> statement.*</p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Enable the clock source of the timer <br  />
@@ -187,7 +188,7 @@ Variables</h2></td></tr>
 <li>Set the priority of the interrupt to <code>1</code> and the subpriority to <code>0</code> <br  />
 </li>
 <li>Enable the interrupt in the NVIC <br  />
- </li>
+</li>
 </ol>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -224,7 +225,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Configure the timer that controls the PWM of the buzzer. </p>
-<p>This function is called by the <code><a class="el" href="port__buzzer_8c.html#a37c661d72c1cd58acb59a26ccf318c5a" title="Configure the HW specifications of a given buzzer melody player.">port_buzzer_init()</a></code> public function to configure the timer that controls the PWM of the buzzer.</p>
+<p>This function is called by the <code><a class="el" href="port__buzzer_8c.html#a37c661d72c1cd58acb59a26ccf318c5a" title="Configure the HW specifications of a given buzzer melody player.">port_buzzer_init()</a></code> public function to configure the timer that controls the PWM of the buzzer. Because there could be several notes playing at the same time, each buzzer melody player has its own timer. So, the timer to be configured is selected by the <code>buzzer_id</code> parameter, and you **must encapsulate the configuration of the timer in a <code>switch</code> or <code>if</code> statement.*</p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
 <p><b>PWM timer setup</b> ✅ 1. Enable the clock source of the timer <br  />
@@ -233,7 +234,7 @@ Variables</h2></td></tr>
 ✅ 4. Generate an update event (register <code>EGR</code>) by setting the <code>UG</code> bit. This will load the values of the <code>ARR</code> and <code>PSC</code> registers into the active registers. <br  />
  <b>PWM mode configuration</b> ✅ 5. Disable the output compare of the corresponding channel (register <code>CCER</code>). Take into account the channel number (1 or 2) and the channel enable bit (CC1E or CC2E) <br  />
 ✅ 6. Set both (i) mode PWM 1, and (ii) enable preload (register CCMRx) &#160;&#160;&#160;&#160;💡 To know which register <code>CCMRx</code> to use check the "Table 11. Alternate function" in the datasheet. <br  />
- </p>
+</p>
 </blockquote>
 <p>It is not needed to set the PWM pulse width and period here. It will be set with the note frequency.</p>
 <dl class="params"><dt>Parameters</dt><dd>

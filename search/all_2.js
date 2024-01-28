@@ -17,6 +17,5 @@ var searchData=
   ['buzzer_5f0_5fpin_27',['BUZZER_0_PIN',['../port__buzzer_8h.html#a41f05b1ca7e202f790b23765eed93ec7',1,'port_buzzer.h']]],
   ['buzzer_5fid_28',['buzzer_id',['../structfsm__buzzer__t.html#a6d7510e2520ba91cf0b6b669dd5e8240',1,'fsm_buzzer_t']]],
   ['buzzer_5fpwm_5fdc_29',['BUZZER_PWM_DC',['../port__buzzer_8h.html#a83931a1f4a7667c31b7c305e32db4860',1,'port_buzzer.h']]],
-  ['buzzer_5fstatus_30',['BUZZER_STATUS',['../fsm__buzzer_8h.html#a5b8bb604b6fa105cbec8fefa70a1f9db',1,'fsm_buzzer.h']]],
-  ['buzzers_5farr_31',['buzzers_arr',['../port__buzzer_8h.html#a7af932ad5c44fae7e29f4f09fddf495a',1,'buzzers_arr():&#160;port_buzzer.c'],['../port__buzzer_8c.html#a7af932ad5c44fae7e29f4f09fddf495a',1,'buzzers_arr():&#160;port_buzzer.c']]]
+  ['buzzers_5farr_30',['buzzers_arr',['../port__buzzer_8h.html#a7af932ad5c44fae7e29f4f09fddf495a',1,'buzzers_arr():&#160;port_buzzer.c'],['../port__buzzer_8c.html#a7af932ad5c44fae7e29f4f09fddf495a',1,'buzzers_arr():&#160;port_buzzer.c']]]
 ];
