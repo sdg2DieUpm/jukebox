@@ -31,9 +31,10 @@ var NAVTREE =
     [ "Getting Started", "index.html#autotoc_md6", [
       [ "Prerequisites", "index.html#autotoc_md7", null ]
     ] ],
-    [ "Authors", "index.html#autotoc_md8", null ],
-    [ "License", "index.html#autotoc_md9", null ],
-    [ "Acknowledgments", "index.html#autotoc_md10", null ],
+    [ "Document your code", "index.html#autotoc_md8", null ],
+    [ "Authors", "index.html#autotoc_md9", null ],
+    [ "License", "index.html#autotoc_md10", null ],
+    [ "Acknowledgments", "index.html#autotoc_md11", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -59,7 +60,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"port__button_8c.html#aba3babbb7f811461f16f7ab309ee660b"
+"port__button_8c.html#a8a60ec4a29c03b384c975a7780082ca3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
