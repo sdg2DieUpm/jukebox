@@ -492,24 +492,28 @@ AFRHy: Alternate function selection for port x pin y (y = 8..15)</dd></dl>
 
 <p>Configure the external interruption or event of a GPIO. </p>
 <blockquote class="doxtable">
-<p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. <b>Enable the System configuration controller clock (SYSCFG).</b> Enable the SYSCFG by setting the bit SYSCFGEN of the peripheral clock enable register (RCC_APB2ENR). The system configuration controller is used here to manage the external interrupt line connection to the GPIOs. <br  />
+<ol type="1">
+<li><b>Enable the System configuration controller clock (SYSCFG).</b> Enable the SYSCFG by setting the bit SYSCFGEN of the peripheral clock enable register (RCC_APB2ENR). The system configuration controller is used here to manage the external interrupt line connection to the GPIOs. <br  />
 &#160;&#160;&#160;&#160;💡 As usual, you can access to the register (<code>APB2ENR</code>) as element of the structure <code>RCC</code>. You can use the macro <code>RCC_APB2ENR_SYSCFGEN</code> defined in <code>stm32f446xx.h</code> to set the bit. Look for the "RCC_APB2ENR" register in the Reference Manual if you need more information. <br  />
 <br  />
-✅ 2. <b>Associate the external interruption line to the given port.</b> Clean and set the bits <b>as shown in the tutorial document</b>. <br  />
+</li>
+<li><b>Associate the external interruption line to the given port.</b> Clean and set the bits <b>as shown in the tutorial document</b>. <br  />
 &#160;&#160;&#160;&#160;💡 Depending on the pin number, use the register SYSCFG_EXTICR1, SYSCFG_EXTICR2, SYSCFG_EXTICR3, or SYSCFG_EXTICR4. The structure <code>SYSCFG</code> contains a 4-element array called <code>EXTICR</code>; the first element (<code>EXTICR[0]</code>) configures the register SYSCFG_EXTICR1, and so on. <br  />
 &#160;&#160;&#160;&#160;💡 To clean the EXTIx bits, you can create a mask depending on the <code>pin</code> value. <br  />
 &#160;&#160;&#160;&#160;💡 To associate the external interruption to the given port, <em>i.e.</em> to set the EXTIx bits, you can create another mask depending on the <code>port</code> value. <br  />
 <br  />
-✅ 3. <b>Select the direction of the trigger</b>: rising edge, falling edge, or both, depending on the value of the given <code>mode</code>. <br  />
+</li>
+<li><b>Select the direction of the trigger</b>: rising edge, falling edge, or both, depending on the value of the given <code>mode</code>. <br  />
 &#160;&#160;&#160;&#160;💡 If <em>rising edge</em>: activate the corresponding bit on the EXTI_RTSR register (element <code>RTSR</code>) of the <code>EXTI</code> structure. <br  />
 &#160;&#160;&#160;&#160;💡 If <em>falling edge</em>: activate the corresponding bit on the EXTI_FTSR register (element <code>FTSR</code>) of the <code>EXTI</code> structure. <br  />
 &#160;&#160;&#160;&#160;💡 If <em>both</em>: activate the corresponding bit on both registers. <br  />
 <br  />
-✅ 4. <b>Select the interrupt and/or event request</b>: depending on the value of the given <code>mode</code>. <br  />
+</li>
+<li><b>Select the interrupt and/or event request</b>: depending on the value of the given <code>mode</code>. <br  />
 &#160;&#160;&#160;&#160;💡 If <em>event request</em> enable: activate the corresponding bit on the EXTI_EMR register (element <code>EMR</code>) of the <code>EXTI</code> structure. <br  />
 &#160;&#160;&#160;&#160;💡 If <em>interrupt request</em> enable: activate the corresponding bit on the EXTI_IMR register (element <code>IMR</code>) of the <code>EXTI</code> structure. <br  />
-</p>
+</li>
+</ol>
 </blockquote>
 <p><br  />
 </p><blockquote class="doxtable">
