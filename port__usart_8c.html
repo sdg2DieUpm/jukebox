@@ -144,9 +144,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a069344e9dac66ca26bbe4756ac249f42"><td class="memItemLeft" align="right" valign="top"><a id="a069344e9dac66ca26bbe4756ac249f42"></a>
-<a class="el" href="structport__usart__hw__t.html">port_usart_hw_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__usart_8c.html#a069344e9dac66ca26bbe4756ac249f42">usart_arr</a> []</td></tr>
-<tr class="memdesc:a069344e9dac66ca26bbe4756ac249f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of elements that represents the HW characteristics of the USARTs. <br /></td></tr>
+<tr class="memitem:a069344e9dac66ca26bbe4756ac249f42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__usart__hw__t.html">port_usart_hw_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__usart_8c.html#a069344e9dac66ca26bbe4756ac249f42">usart_arr</a> []</td></tr>
+<tr class="memdesc:a069344e9dac66ca26bbe4756ac249f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of elements that represents the HW characteristics of the USARTs.  <a href="port__usart_8c.html#a069344e9dac66ca26bbe4756ac249f42">More...</a><br /></td></tr>
 <tr class="separator:a069344e9dac66ca26bbe4756ac249f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -444,13 +443,15 @@ Variables</h2></td></tr>
 &#160;&#160;&#160;&#160;💡 Set oversampling to 16 <br  />
 ✅ 6. Enable transmission and reception <br  />
 ✅ 7. Disable reception, and transmission interrupts <br  />
-✅ 8. Clear the interrupt flags <code>RXNE</code>, <code>TXE</code> and <code>TC</code> <br  />
+✅ 8. Clear the interrupt flags <code>RXNE</code> <br  />
+&#160;&#160;&#160;&#160;💡 <code>TXE</code> bit is read only. If the data register (<code>DR</code>) is empty, this bit will be set automatically by HW. <br  />
+&#160;&#160;&#160;&#160;💡 Despite cleaning <code>TC</code> bit, if the data register (<code>DR</code>) is empty (transmission completed) and the <code>TXE</code> bit is set, this bit will be set automatically by HW. <br  />
 ✅ 9. (Given code) Call function <code>NVIC_SetPriority()</code> with the right arguments to set the USART interrupt priority to <code>2</code> and the subpriority to <code>0</code> <br  />
 ✅ 10. (Given code) Call function <code>NVIC_EnableIRQ()</code> with the right arguments to enable the USART interrupts globally <br  />
 ✅ 11. Enable the USART <br  />
 ✅ 12. Call function <code><a class="el" href="port__usart_8c.html#a00474783fc0c4d1f801cef5af7d2af8d" title="Reset a buffer to a default value.">_reset_buffer()</a></code> with the right arguments to reset the <code>input_buffer</code> field of the <code>usart_arr[]</code> element with size <code>USART_INPUT_BUFFER_LENGTH</code> <br  />
 ✅ 13. Call function <code><a class="el" href="port__usart_8c.html#a00474783fc0c4d1f801cef5af7d2af8d" title="Reset a buffer to a default value.">_reset_buffer()</a></code> with the right arguments to reset the <code>output_buffer</code> field of the <code>usart_arr[]</code> element with size <code>USART_OUTPUT_BUFFER_LENGTH</code> <br  />
- </p>
+</p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -660,6 +661,24 @@ false </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a069344e9dac66ca26bbe4756ac249f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069344e9dac66ca26bbe4756ac249f42">&#9670;&nbsp;</a></span>usart_arr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structport__usart__hw__t.html">port_usart_hw_t</a> usart_arr[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Array of elements that represents the HW characteristics of the USARTs. </p>
+<p>This is an <b>extern</b> variable that is declared in <code><a class="el" href="port__usart_8h.html" title="Header for port_usart.c file.">port_usart.h</a></code>. </p>
 
 </div>
 </div>

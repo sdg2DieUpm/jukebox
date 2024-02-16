@@ -127,7 +127,7 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a7af932ad5c44fae7e29f4f09fddf495a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structport__buzzer__hw__t.html">port_buzzer_hw_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__buzzer_8c.html#a7af932ad5c44fae7e29f4f09fddf495a">buzzers_arr</a> []</td></tr>
-<tr class="memdesc:a7af932ad5c44fae7e29f4f09fddf495a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of buzzers.  <a href="port__buzzer_8c.html#a7af932ad5c44fae7e29f4f09fddf495a">More...</a><br /></td></tr>
+<tr class="memdesc:a7af932ad5c44fae7e29f4f09fddf495a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of elements that represents the HW characteristics of the buzzers.  <a href="port__buzzer_8c.html#a7af932ad5c44fae7e29f4f09fddf495a">More...</a><br /></td></tr>
 <tr class="separator:a7af932ad5c44fae7e29f4f09fddf495a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -266,7 +266,7 @@ Variables</h2></td></tr>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Return the value of the <code>note_end</code> flag if the buzzer ID is valid. Otherwise, return false. <br  />
- </p>
+</p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -349,7 +349,7 @@ false </dd></dl>
 &#160;&#160;&#160;&#160;💡 This is a temporary value because it could be greater than 65536 (or 0xFFFF) <br  />
 ✅ 3. Compute the prescaler value and set the PSC register of the timer. <br  />
 &#160;&#160;&#160;&#160;💡 Compute a temporary value of the prescaler starting with 0 and increase it until the value of the ARR register is less than 65536 (or 0xFFFF) <br  />
- ✅ 4. Set the <code>ARR</code> register of the timer with the temporary value computed in step 2, and set the <code>PSC</code> register with the temporary value computed in step 3 <br  />
+✅ 4. Set the <code>ARR</code> register of the timer with the temporary value computed in step 2, and set the <code>PSC</code> register with the temporary value computed in step 3 <br  />
 ✅ 5. The <code>PSC</code> and <code>ARR</code> values are currently in the preload registers. To load them into the active registers we need an update event. We achieve this by setting the <code>UG</code> bit of the <code>EGR</code> register. It is important to do this at the end of the configuration of the timer. <br  />
 ✅ 6. Set the <code>note_end</code> flag to the appropriate value <br  />
 ✅ 7. Enable the timer <br  />
@@ -464,21 +464,14 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    [<a class="code" href="port__buzzer_8h.html#a4b9909025257c07ef8f74ecec73bef93">BUZZER_0_ID</a>] = {.p_port = <a class="code" href="port__buzzer_8h.html#a977e3f4e8f80b7c2d7474e499c5cf4ee">BUZZER_0_GPIO</a>, .pin = <a class="code" href="port__buzzer_8h.html#a41f05b1ca7e202f790b23765eed93ec7">BUZZER_0_PIN</a>, .alt_func = <a class="code" href="port__buzzer_8c.html#a2a49f7f72ccc4b0d80601926cbe2373d">ALT_FUNC2_TIM3</a>, .note_end = <span class="keyword">false</span>},</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Array of buzzers. </p>
-<p>Array of elements that represents the HW characteristics of the buzzers.</p>
+
+<p>Array of elements that represents the HW characteristics of the buzzers. </p>
+<p>This is an <b>extern</b> variable that is declared in <code><a class="el" href="port__buzzer_8h.html" title="Header for port_buzzer.c file.">port_buzzer.h</a></code>. </p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aport__buzzer_8h_html_a4b9909025257c07ef8f74ecec73bef93"><div class="ttname"><a href="port__buzzer_8h.html#a4b9909025257c07ef8f74ecec73bef93">BUZZER_0_ID</a></div><div class="ttdeci">#define BUZZER_0_ID</div><div class="ttdef"><b>Definition:</b> port_buzzer.h:20</div></div>
-<div class="ttc" id="aport__buzzer_8h_html_a41f05b1ca7e202f790b23765eed93ec7"><div class="ttname"><a href="port__buzzer_8h.html#a41f05b1ca7e202f790b23765eed93ec7">BUZZER_0_PIN</a></div><div class="ttdeci">#define BUZZER_0_PIN</div><div class="ttdef"><b>Definition:</b> port_buzzer.h:22</div></div>
-<div class="ttc" id="aport__buzzer_8c_html_a2a49f7f72ccc4b0d80601926cbe2373d"><div class="ttname"><a href="port__buzzer_8c.html#a2a49f7f72ccc4b0d80601926cbe2373d">ALT_FUNC2_TIM3</a></div><div class="ttdeci">#define ALT_FUNC2_TIM3</div><div class="ttdef"><b>Definition:</b> port_buzzer.c:13</div></div>
-<div class="ttc" id="aport__buzzer_8h_html_a977e3f4e8f80b7c2d7474e499c5cf4ee"><div class="ttname"><a href="port__buzzer_8h.html#a977e3f4e8f80b7c2d7474e499c5cf4ee">BUZZER_0_GPIO</a></div><div class="ttdeci">#define BUZZER_0_GPIO</div><div class="ttdef"><b>Definition:</b> port_buzzer.h:21</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -225,7 +225,7 @@ Variables</h2></td></tr>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Return the value of the <code>note_end</code> flag if the buzzer ID is valid. Otherwise, return false. <br  />
- </p>
+</p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -308,7 +308,7 @@ false </dd></dl>
 &#160;&#160;&#160;&#160;💡 This is a temporary value because it could be greater than 65536 (or 0xFFFF) <br  />
 ✅ 3. Compute the prescaler value and set the PSC register of the timer. <br  />
 &#160;&#160;&#160;&#160;💡 Compute a temporary value of the prescaler starting with 0 and increase it until the value of the ARR register is less than 65536 (or 0xFFFF) <br  />
- ✅ 4. Set the <code>ARR</code> register of the timer with the temporary value computed in step 2, and set the <code>PSC</code> register with the temporary value computed in step 3 <br  />
+✅ 4. Set the <code>ARR</code> register of the timer with the temporary value computed in step 2, and set the <code>PSC</code> register with the temporary value computed in step 3 <br  />
 ✅ 5. The <code>PSC</code> and <code>ARR</code> values are currently in the preload registers. To load them into the active registers we need an update event. We achieve this by setting the <code>UG</code> bit of the <code>EGR</code> register. It is important to do this at the end of the configuration of the timer. <br  />
 ✅ 6. Set the <code>note_end</code> flag to the appropriate value <br  />
 ✅ 7. Enable the timer <br  />
@@ -425,7 +425,8 @@ false </dd></dl>
 </div><div class="memdoc">
 
 <p>Array of elements that represents the HW characteristics of the buzzers. </p>
-<p>Array of elements that represents the HW characteristics of the buzzers. </p>
+<p>This is an <b>extern</b> variable that is defined in <code><a class="el" href="port__buzzer_8c.html" title="Portable functions to interact with the buzzer melody player FSM library.">port_buzzer.c</a></code>. It represents an array of hardware buzzers.</p>
+<p>This is an <b>extern</b> variable that is declared in <code><a class="el" href="port__buzzer_8h.html" title="Header for port_buzzer.c file.">port_buzzer.h</a></code>. </p>
 
 </div>
 </div>
