@@ -360,8 +360,8 @@ false </dd></dl>
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Call the right function to reset the output data in the PORT layer before setting a new one <br  />
 ✅ 2. Call function <code><a class="el" href="port__usart_8h.html#a8c1cbe02240b61695846e3fcc37c9e96" title="Copy the message passed as argument to the output buffer of the USART.">port_usart_copy_to_output_buffer()</a></code> to set the data stored in the array <code>out_data</code>. The length of the data are defined by <code>USART_OUTPUT_BUFFER_LENGTH</code> <br  />
-✅ 3. For security reasons wait until the TXE flag is set to 1 (TX register is empty) <br  />
-&#160;&#160;&#160;&#160;💡 Do a <code>while</code> loop that checks the TXE flag and does nothing until it is set to 1: <br  />
+✅ 3. For security reasons we wait until the TX register is empty <br  />
+&#160;&#160;&#160;&#160;💡 Do a <code>while</code> loop that checks the TXE flag and does nothing until it is set to 1. To do so, call the function <code><a class="el" href="port__usart_8h.html#ae8e8a351f28153f5ea4d9ba1d01a98d4" title="Check if the USART is ready to receive a new message.">port_usart_get_txr_status()</a></code>: <br  />
 &#160;&#160;&#160;&#160; Look at section "Código para gestionar el envío y recepción de datos" of the reference book. <br  />
 ✅ 4. Call function <code><a class="el" href="port__usart_8h.html#a726f80521212a7e8f3505f00e0ddf49f" title="Function to write the data from the output buffer to the USART Data Register.">port_usart_write_data()</a></code> to write the first character to the USART TX register <br  />
 ✅ 5. Call function <code><a class="el" href="port__usart_8h.html#aef338f13686b48098077d803ce19c9a9" title="Enable USART TX interrupts.">port_usart_enable_tx_interrupt()</a></code> to enable the USART TX interrupt to start the transmission <br  />
@@ -412,9 +412,8 @@ false </dd></dl>
 <p>This function finishes the data transmission by resetting the output data in the PORT layer.</p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Call the right function to disable the USART interrupts <br  />
-✅ 2. Call the right function to reset the output data in the PORT layer <br  />
-✅ 3. Reset the output data <code>out_data</code> with <code>EMPTY_BUFFER_CONSTANT</code>. Use <code>memset()</code> function <br  />
+<p>✅ 1. Call the right function to reset the output data in the PORT layer <br  />
+✅ 2. Reset the output data <code>out_data</code> with <code>EMPTY_BUFFER_CONSTANT</code>. Use <code>memset()</code> function <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>

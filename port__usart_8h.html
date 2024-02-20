@@ -145,6 +145,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5bcb566f1532b7530fa9fea97925dde5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__usart_8h.html#a5bcb566f1532b7530fa9fea97925dde5">port_usart_get_from_input_buffer</a> (uint32_t usart_id, char *p_buffer)</td></tr>
 <tr class="memdesc:a5bcb566f1532b7530fa9fea97925dde5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the message received through the USART and store it in the buffer passed as argument.  <a href="port__usart_8h.html#a5bcb566f1532b7530fa9fea97925dde5">More...</a><br /></td></tr>
 <tr class="separator:a5bcb566f1532b7530fa9fea97925dde5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e8a351f28153f5ea4d9ba1d01a98d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__usart_8h.html#ae8e8a351f28153f5ea4d9ba1d01a98d4">port_usart_get_txr_status</a> (uint32_t usart_id)</td></tr>
+<tr class="memdesc:ae8e8a351f28153f5ea4d9ba1d01a98d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the USART is ready to receive a new message.  <a href="port__usart_8h.html#ae8e8a351f28153f5ea4d9ba1d01a98d4">More...</a><br /></td></tr>
+<tr class="separator:ae8e8a351f28153f5ea4d9ba1d01a98d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c1cbe02240b61695846e3fcc37c9e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__usart_8h.html#a8c1cbe02240b61695846e3fcc37c9e96">port_usart_copy_to_output_buffer</a> (uint32_t usart_id, char *p_data, uint32_t length)</td></tr>
 <tr class="memdesc:a8c1cbe02240b61695846e3fcc37c9e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the message passed as argument to the output buffer of the USART.  <a href="port__usart_8h.html#a8c1cbe02240b61695846e3fcc37c9e96">More...</a><br /></td></tr>
 <tr class="separator:a8c1cbe02240b61695846e3fcc37c9e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -579,6 +582,40 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae8e8a351f28153f5ea4d9ba1d01a98d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e8a351f28153f5ea4d9ba1d01a98d4">&#9670;&nbsp;</a></span>port_usart_get_txr_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool port_usart_get_txr_status </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>usart_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the USART is ready to receive a new message. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Return the status of the TXE flag <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usart_id</td><td>USART ID. This index is used to select the element of the <code>usart_arr[]</code> array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>

@@ -7,6 +7,7 @@ var port__usart_8c =
     [ "port_usart_enable_rx_interrupt", "port__usart_8c.html#a19978b62ef50737274de9602506942db", null ],
     [ "port_usart_enable_tx_interrupt", "port__usart_8c.html#aef338f13686b48098077d803ce19c9a9", null ],
     [ "port_usart_get_from_input_buffer", "port__usart_8c.html#a9ed0306f1a8856ec7d786a0c68cecf58", null ],
+    [ "port_usart_get_txr_status", "port__usart_8c.html#ae8e8a351f28153f5ea4d9ba1d01a98d4", null ],
     [ "port_usart_init", "port__usart_8c.html#a616cf7d2ed1be55fb0a600133583cb65", null ],
     [ "port_usart_reset_input_buffer", "port__usart_8c.html#aced39ee5d2099804c4abc9e2d706c24b", null ],
     [ "port_usart_reset_output_buffer", "port__usart_8c.html#a8466a1466a1a519206f00f0440c9efba", null ],
