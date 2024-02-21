@@ -22,13 +22,13 @@
 
 
 /* Public functions */
-void fsm_usart_get_data(fsm_t *p_this, char *p_data)
+void fsm_usart_get_in_data(fsm_t *p_this, char *p_data)
 {
     fsm_usart_t *p_fsm = (fsm_usart_t *)(p_this);
     memcpy(p_data, p_fsm->in_data, USART_INPUT_BUFFER_LENGTH);
 }
 
-void fsm_usart_set_data(fsm_t *p_this, char *p_data)
+void fsm_usart_set_out_data(fsm_t *p_this, char *p_data)
 {
     fsm_usart_t *p_fsm = (fsm_usart_t *)(p_this);
     // Ensure to reset the output data before setting a new one
