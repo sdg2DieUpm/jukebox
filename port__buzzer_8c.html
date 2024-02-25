@@ -93,7 +93,8 @@ $(document).ready(function(){initNavTree('port__buzzer_8c.html',''); initResizab
 
 <p>Portable functions to interact with the buzzer melody player FSM library.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="port__buzzer_8h.html">port_buzzer.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="port__buzzer_8h.html">port_buzzer.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -342,17 +343,32 @@ false </dd></dl>
 <p>This function is called by the <code><a class="el" href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402" title="Start a note by setting the PWM frequency and the timer duration.">_start_note()</a></code> private function to set the duration of the note in milliseconds.</p>
 <p>Because there could be several notes playing at the same time, each buzzer melody player has its own timer. So, the timer to be configured is selected by the <code>buzzer_id</code> parameter, and you <b>must encapsulate the configuration of the timer in a <code>switch</code> or <code>if</code> statement.</b></p>
 <p><b>Use the timer indicated in the <a href="index.html">main page</a>.</b></p>
+<dl class="section warning"><dt>Warning</dt><dd>It is important to <b>work with double type numbers to avoid the loss of precision</b> when computing the temporary values of the <code>ARR</code> and <code>PSC</code> registers. The <code>math.h</code> library is included to use the <code>round()</code> function. <br  />
+To store the temporary values of the <code>ARR</code> and <code>PSC</code> registers, <b>cast the result of the <code>round()</code> function to <code>uint32_t</code></b>. <br  />
+<b>All the values must be represented as double in the formulas.</b> <br  />
+Example of C code: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line">...</div>
+<div class="line">double sysclk_as_double = (double)<a class="code" href="port__system_8c.html#aa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</a>; <span class="comment">// Important to cast to double</span></div>
+<div class="line"><span class="keywordtype">double</span> ms_as_double = (double)duration_ms; <span class="comment">// Important to cast to double</span></div>
+<div class="line"><span class="keywordtype">double</span> what_ever_formula = (sysclk_as_double / ms_as_double) + 1.0; <span class="comment">// Important to use 1.0 instead of 1!!! This formula is just an example!!!</span></div>
+<div class="line">TIMx-&gt;ARR = (uint32_t)(round(temp_value)); <span class="comment">// Important to round before casting to uint32_t</span></div>
+</div><!-- fragment --></dd></dl>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Disable the timer and reset the counter <br  />
-✅ 2. Compute a temporary value for the <code>ARR</code> register of the timer with the duration of the note <b>in ms</b> considering <code>PSC=0</code> <br  />
-&#160;&#160;&#160;&#160;💡 This is a temporary value because it could be greater than 65536 (or 0xFFFF) <br  />
-✅ 3. Compute the prescaler value and set the PSC register of the timer. <br  />
-&#160;&#160;&#160;&#160;💡 Compute a temporary value of the prescaler starting with 0 and increase it until the value of the ARR register is less than 65536 (or 0xFFFF) <br  />
-✅ 4. Set the <code>ARR</code> register of the timer with the temporary value computed in step 2, and set the <code>PSC</code> register with the temporary value computed in step 3 <br  />
-✅ 5. The <code>PSC</code> and <code>ARR</code> values are currently in the preload registers. To load them into the active registers we need an update event. We achieve this by setting the <code>UG</code> bit of the <code>EGR</code> register. It is important to do this at the end of the configuration of the timer. <br  />
-✅ 6. Set the <code>note_end</code> flag to the appropriate value <br  />
-✅ 7. Enable the timer <br  />
+✅ 2. Convert <code>duration_ms</code> and <code>SystemCoreClock</code> to double and store them in local variables. This is to ensure that the subsequent calculations are performed in floating-point arithmetic. <br  />
+✅ 3. Compute an initial value for the <code>PSC</code> register considering the maximum value of <code>ARR</code> (65535.0). Store it in a local variable of type <code>double</code>. <br  />
+&#160;&#160;&#160;&#160;💡 This would make <code>ARR</code> less than or equal to 65535.0, and we will adjust <code>ARR</code> and <code>PSC</code> if necessary. This eliminates the need for a loop, which could be slow if <code>ARR</code> is much larger than 0xFFFF. <br  />
+&#160;&#160;&#160;&#160;💡 Use all variable and numbers as <code>double</code> (i.e., use 1.0 instead of 1). <br  />
+&#160;&#160;&#160;&#160;💡 To minimize the error, round the value using the function <code>round()</code> from the <code>math.h</code> library. Do not cast, casting trunks the decimal value. <br  />
+✅ 4. Compute the value of the <code>ARR</code> register with the previously computed <code>PSC</code> value. Store it in a local variable of type <code>double</code>. <br  />
+&#160;&#160;&#160;&#160;💡 To minimize the error, round the value using the function <code>round()</code>. <br  />
+✅ 5. Check if the value computed of <code>ARR</code> is greater than 0xFFFF (or 65535.0). If it is, increment <code>PSC</code> by 1.0 and recalculate <code>ARR</code>. This is to ensure that <code>ARR</code> does not exceed 0xFFFF. <br  />
+✅ 6. Load the temporary values computed for <code>ARR</code> and <code>PSC</code> into the corresponding registers of the timer. <br  />
+&#160;&#160;&#160;&#160;💡 Ensure that values are rounded before casting. <br  />
+✅ 7. The <code>PSC</code> and <code>ARR</code> values are currently in the preload registers. To load them into the active registers we need an update event. We achieve this by setting the <code>UG</code> bit of the <code>EGR</code> register. It is important to do this at the end of the configuration of the timer. <br  />
+✅ 8. Set the <code>note_end</code> flag to the appropriate value. <br  />
+✅ 9. Enable the timer. <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -395,20 +411,28 @@ false </dd></dl>
 <p>This function is called by the <code><a class="el" href="fsm__buzzer_8c.html#a9d2ee57bf248ca0e856ecbb6ee65f402" title="Start a note by setting the PWM frequency and the timer duration.">_start_note()</a></code> private function to set the frequency of the note in Hz.</p>
 <p>Because there could be several notes playing at the same time, each buzzer melody player has its own timer. So, the timer to be configured is selected by the <code>buzzer_id</code> parameter, and you **must encapsulate the configuration of the timer in a <code>switch</code> or <code>if</code> statement.*</p>
 <p><b>Use the timer indicated in the <a href="index.html">main page</a>.</b></p>
+<dl class="section warning"><dt>Warning</dt><dd>It is important to <b>work with double type numbers to avoid the loss of precision</b> when computing the temporary values of the <code>ARR</code> and <code>PSC</code> registers. The <code>math.h</code> library is included to use the <code>round()</code> function. <br  />
+</dd></dl>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. If the frequency is 0, disable the timer and return <br  />
+<p>Similar to the <code><a class="el" href="port__buzzer_8h.html#ae0607400eb9b14cf11f0d2b521ad86d0" title="Set the duration of the timer that controls the duration of the note.">port_buzzer_set_note_duration()</a></code> function, you must configure the timer that controls the frequency of the note: <br  />
+✅ 1. If the frequency is 0, disable the timer and return <br  />
 ✅ 2. Disable the timer and reset the counter <br  />
-✅ 3. Compute a temporary value for the <code>ARR</code> register of the timer with the frequency of the note <b>in Hz</b> considering <code>PSC=0</code> <br  />
-&#160;&#160;&#160;&#160;💡 This is a temporary value because it could be greater than 65536 (or 0xFFFF) <br  />
-✅ 4. Compute the prescaler value and set the PSC register of the timer. <br  />
-&#160;&#160;&#160;&#160;💡 Compute a temporary value of the prescaler starting with 0 and increase it until the value of the ARR register is less than 65536 (or 0xFFFF) <br  />
-✅ 5. Set the <code>ARR</code> register of the timer with the temporary value computed in step 3, and set the <code>PSC</code> register with the temporary value computed in step 4 <br  />
-✅ 6. Set the PWM pulse width to <code>BUZZER_PWM_DC</code>. <br  />
-✅ 7. The <code>PSC</code> and <code>ARR</code> values are currently in the preload registers. To load them into the active registers we need an update event. We achieve this by setting the <code>UG</code> bit of the <code>EGR</code> register. It is important to do this at the end of the configuration of the timer. <br  />
-✅ 8. Enable the output compare in the capture/compare mode register of the timer. <br  />
+✅ 3. Convert <code>SystemCoreClock</code> to double and store it in local variables. This is to ensure that the subsequent calculations are performed in floating-point arithmetic. <br  />
+✅ 4. Compute an initial value for the <code>PSC</code> register considering the maximum value of <code>ARR</code> (65535.0). Store it in a local variable of type <code>double</code>. <br  />
+&#160;&#160;&#160;&#160;💡 This would make <code>ARR</code> less than or equal to 65535.0, and we will adjust <code>ARR</code> and <code>PSC</code> if necessary. This eliminates the need for a loop, which could be slow if <code>ARR</code> is much larger than 0xFFFF. <br  />
+&#160;&#160;&#160;&#160;💡 Use all variable and numbers as <code>double</code> (i.e., use 1.0 instead of 1). <br  />
+&#160;&#160;&#160;&#160;💡 To minimize the error, round the value using the function <code>round()</code> from the <code>math.h</code> library. Do not cast, casting trunks the decimal value. <br  />
+✅ 5. Compute the value of the <code>ARR</code> register with the previously computed <code>PSC</code> value. Store it in a local variable of type <code>double</code>. <br  />
+&#160;&#160;&#160;&#160;💡 To minimize the error, round the value using the function <code>round()</code>. <br  />
+✅ 6. Check if the value computed of <code>ARR</code> is greater than 0xFFFF (or 65535.0). If it is, increment <code>PSC</code> by 1.0 and recalculate <code>ARR</code>. This is to ensure that <code>ARR</code> does not exceed 0xFFFF. <br  />
+✅ 7. Load the temporary values computed for <code>ARR</code> and <code>PSC</code> into the corresponding registers of the timer. <br  />
+&#160;&#160;&#160;&#160;💡 Ensure that values are rounded before casting. <br  />
+✅ 8. Set the PWM pulse width to <code>BUZZER_PWM_DC</code>. <br  />
+✅ 9. The <code>PSC</code> and <code>ARR</code> values are currently in the preload registers. To load them into the active registers we need an update event. We achieve this by setting the <code>UG</code> bit of the <code>EGR</code> register. It is important to do this at the end of the configuration of the timer. <br  />
+✅ 10. Enable the output compare in the capture/compare mode register of the timer. <br  />
 &#160;&#160;&#160;&#160;💡 Be careful to select the correct channel. Remember that, the channel is defined in the Alternate function table of the datasheet. <br  />
-✅ 9. Enable the timer <br  />
+✅ 11. Enable the timer <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -472,6 +496,7 @@ false </dd></dl>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aport__system_8c_html_aa3cd3e43291e81e795d642b79b6088e6"><div class="ttname"><a href="port__system_8c.html#aa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</a></div><div class="ttdeci">uint32_t SystemCoreClock</div><div class="ttdef"><b>Definition:</b> port_system.c:18</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
