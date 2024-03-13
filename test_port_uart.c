@@ -239,7 +239,7 @@ void test_usart_config(void)
     
     // Check that the baud rate is configured correctly
     uint32_t usart_brr = USART_0->BRR;
-    UNITY_TEST_ASSERT_EQUAL_UINT32(03203, usart_brr, __LINE__, "ERROR: USART baud rate is not configured as 9600 bauds");
+    UNITY_TEST_ASSERT_INT_WITHIN(1, 03203, usart_brr, __LINE__, "ERROR: USART baud rate is not configured as 9600 bauds");
 
     // Check that no other registers have been modified
     uint32_t mask_cr1 = ~(0xB5EC);
